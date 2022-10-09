@@ -37,7 +37,6 @@ public class Add_Customer_Data{
             selectcustomerMenu();
         }else if(addNum>0){
             System.out.println("고객을 추가합니다.");
-
             addData();
         }else {
             System.out.println("다시 입력해주세요");
@@ -71,7 +70,7 @@ public class Add_Customer_Data{
             System.out.println("5. 정보 입력 종료");
             System.out.println("====================");
             System.out.print("메뉴 선택: ");
-            int menu = Integer.parseInt(br.readLine());
+            int menu = sc.nextInt();
 
 
             //serialNo, cutomerName, customerID, usingTime, pay
@@ -119,23 +118,12 @@ public class Add_Customer_Data{
                     //
                     break;
 
-
-
             }
         }
 
-
-
-
-
+    }
+    public static void ExceptionAdd(){
 
     }
-
-
-
-
-
-
-
 
 }
