@@ -4,12 +4,6 @@
     <list default="true" id="8dccc23b-2ed3-4ac3-bfc6-ddc1bb7d2851" name="Changes" comment="수정중">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Customer_Data/Add_Customer_Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer_Data/Add_Customer_Data.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Customer_Data/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer_Data/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Customer_Data/Delete_Customer_Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer_Data/Delete_Customer_Data.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Customer_Data/Update_Customer_Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer_Data/Update_Customer_Data.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Customer_Data/View_Customer_Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer_Data/View_Customer_Data.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Store/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Store/Data.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Store/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Store/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665315912167</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="수정중">
+      <created>1665334363813</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1665334363813</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

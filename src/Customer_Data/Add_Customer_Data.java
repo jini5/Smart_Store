@@ -15,7 +15,7 @@ public class Add_Customer_Data{
 
     static int Num=0;
     static int addNum;
-    static int cnt=0;
+    static int cnt=1;
     public static Data[]  customerlist;
 
     public Add_Customer_Data(String cutomerName, String customerID, double usingTime, int pay) {
@@ -77,35 +77,35 @@ public class Add_Customer_Data{
             //serialNo, cutomerName, customerID, usingTime, pay
             switch (menu) {
                 case 1:
-                    System.out.println(addNum+"명 중 "+(cnt+1)+"번째 고객 이름을 입력하세요");
+                    System.out.println(addNum+"명 중 "+(cnt)+"번째 고객 이름을 입력하세요");
                     System.out.print("입력: ");
                     name = st.nextToken(br.readLine());
                     //
                     break;
                 case 2:
-                    System.out.println((cnt+1)+"번째 고객 ID를 입력하세요");
+                    System.out.println(addNum+"명 중 "+(cnt)+"번째 고객 ID를 입력하세요");
                     System.out.print("입력: ");
                     ID = sc.next();
                     //
                     break;
                 case 3:
-                    System.out.println((cnt+1)+"번째 고객 사용 시간을 입력하세요");
+                    System.out.println(addNum+"명 중 "+(cnt)+"번째 고객 사용 시간을 입력하세요");
                     System.out.print("입력: ");
                     time = sc.nextDouble();
                     //
                     break;
                 case 4:
-                    System.out.println((cnt+1)+"번째 고객 사용 시간 금액을 입력하세요");
+                    System.out.println(addNum+"명 중 "+(cnt)+"번째 고객 사용 시간 금액을 입력하세요");
                     System.out.print("입력: ");
                     money = sc.nextInt();
                     //
                     break;
                 case 5:
-                    System.out.println((cnt+1)+"번째 고객 입력 종료");
+                    System.out.println(addNum+"명 중 "+(cnt)+"번째 고객 입력 종료");
                     customerlist[Num+cnt] = new Data(name, ID, time, money);
                     cnt++;
 
-                    if (cnt == addNum) {
+                    if (cnt > addNum) {
                         result = false;
                         int cnt= 0;
 
