@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8dccc23b-2ed3-4ac3-bfc6-ddc1bb7d2851" name="Changes" comment="수정중">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Smart_Store.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Classification_Parameter/Back.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Classification_Parameter/Classification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Classification_Parameter/Set_Parameter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Classification_Parameter/Summary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Classification_Parameter/Update_Parameter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Classification_Parameter/View_Parameter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Customer_Data/Add_Customer_Data.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Customer_Data/Back.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Customer_Data/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Customer_Data/Delete_Customer_Data.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Customer_Data/Update_Customer_Data.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Customer_Data/View_Customer_Data.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Store/Data.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Store/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Summary/Back.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Summary/Summary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Summary/Summary_All.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Summary/Summary_Name.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Summary/Summary_SpentTime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Summary/Summary_TotalPayment.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2FnvG0gmvtbjSn6dzfAv8NNvMnZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\user\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8dccc23b-2ed3-4ac3-bfc6-ddc1bb7d2851" name="Changes" comment="" />
+      <created>1665140564898</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1665140564898</updated>
+    </task>
+    <task id="LOCAL-00001" summary="수정중">
+      <created>1665303131596</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1665303131596</updated>
+    </task>
+    <task id="LOCAL-00002" summary="수정중">
+      <created>1665308838562</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1665308838562</updated>
+    </task>
+    <task id="LOCAL-00003" summary="수정중">
+      <created>1665312949737</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1665312949737</updated>
+    </task>
+    <task id="LOCAL-00004" summary="수정중">
+      <created>1665313406335</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1665313406335</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="수정중" />
+    <option name="LAST_COMMIT_MESSAGE" value="수정중" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
