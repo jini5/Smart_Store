@@ -7,7 +7,7 @@ import static Customer_Data.Customer.customerMenu;
 import static Summary.Summary.summary;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
 
         System.out.println("========================");
@@ -16,13 +16,12 @@ public class Main {
         System.out.println("3. 요약");
         System.out.println("4. 프로그램 종료");
         System.out.println("========================");
-        System.out.println("메뉴를 선택해주세요: ");
+        System.out.print("메뉴 선택: ");
         selectMainMenu();
-
 
     }
 
-    public static void selectMainMenu() {
+    public static void selectMainMenu() throws IOException {
         Scanner sc = new Scanner(System.in);
         int menu = sc.nextInt();
 

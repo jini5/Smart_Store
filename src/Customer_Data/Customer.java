@@ -1,5 +1,6 @@
 package Customer_Data;
 
+import java.io.IOException;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -12,7 +13,7 @@ public class Customer {
 
 
     //메뉴 선택
-    public static void customerMenu(){
+    public static void customerMenu() throws IOException {
         System.out.println("================");
         System.out.println("고객 정보 추가");
         System.out.println("고객 정보 보기");
@@ -20,11 +21,12 @@ public class Customer {
         System.out.println("고객 정보 삭제");
         System.out.println("뒤로가기");
         System.out.println("================");
+        System.out.print("메뉴 선택: ");
         selectcustomerMenu();
     }
 
 
-    private static void selectcustomerMenu() {
+    static void selectcustomerMenu() throws IOException {
         Scanner sc = new Scanner(System.in);
         int menu = sc.nextInt();
 

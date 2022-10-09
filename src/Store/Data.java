@@ -6,19 +6,21 @@ import java.util.Objects;
 
 public class Data {
 
-    private String serialNo;
+    private static int serialNo;
     private String cutomerName;
     private String customerID;
-    private String usingTime;
+    private double usingTime;
     private int pay;
 
     //////////////////////////////////////////
-    public String getSerialNo() {
+
+
+    public static int getSerialNo() {
         return serialNo;
     }
 
-    public void setSerialNo(String serialNo) {
-        this.serialNo = serialNo;
+    public static void setSerialNo(int serialNo) {
+        Data.serialNo = serialNo;
     }
 
     public String getCutomerName() {
@@ -37,11 +39,11 @@ public class Data {
         this.customerID = customerID;
     }
 
-    public String getUsingTime() {
+    public Double getUsingTime() {
         return usingTime;
     }
 
-    public void setUsingTime(String usingTime) {
+    public void setUsingTime(double usingTime) {
         this.usingTime = usingTime;
     }
 
@@ -54,43 +56,42 @@ public class Data {
     }
     //////////////////////////////////////////
 
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Data data = (Data) o;
-        return getPay() == data.getPay() && Objects.equals(getSerialNo(), data.getSerialNo()) && Objects.equals(getCutomerName(), data.getCutomerName()) && Objects.equals(getCustomerID(), data.getCustomerID()) && Objects.equals(getUsingTime(), data.getUsingTime());
+        return getPay() == data.getPay() && Objects.equals(getCutomerName(), data.getCutomerName()) && Objects.equals(getCustomerID(), data.getCustomerID()) && Objects.equals(getUsingTime(), data.getUsingTime());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getSerialNo(), getCutomerName(), getCustomerID(), getUsingTime(), getPay());
+        return Objects.hash(getCutomerName(), getCustomerID(), getUsingTime(), getPay());
     }
-    //////////////////////////////////////////
-
 
     @Override
     public String toString() {
         return "Data{" +
-                "serialNo='" + serialNo + '\'' +
-                ", cutomerName='" + cutomerName + '\'' +
+                "cutomerName='" + cutomerName + '\'' +
                 ", customerID='" + customerID + '\'' +
                 ", usingTime='" + usingTime + '\'' +
                 ", pay=" + pay +
                 '}';
     }
-    //////////////////////////////////////////
+//////////////////////////////////////////
 
 
-    public Data(String serialNo, String cutomerName, String customerID, String usingTime, int pay) {
-        this.serialNo = serialNo;
+    public Data(String cutomerName, String customerID, double usingTime, int pay) {
         this.cutomerName = cutomerName;
         this.customerID = customerID;
         this.usingTime = usingTime;
         this.pay = pay;
+        serialNo++;
     }
+
     //////////////////////////////////////////
+
+
 
 
 
