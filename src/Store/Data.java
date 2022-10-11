@@ -1,26 +1,25 @@
 package Store;
 
-import Customer_Data.Customer;
-
 import java.util.Objects;
 
 public class Data {
 
-    private static int serialNo;
+    private String serialNo;
     private String cutomerName;
     private String customerID;
     private double usingTime;
     private int pay;
 
+    private static int serialCnt = 0 ;
     //////////////////////////////////////////
 
 
-    public static int getSerialNo() {
+    public String getSerialNo() {
         return serialNo;
     }
 
-    public static void setSerialNo(int serialNo) {
-        Data.serialNo = serialNo;
+    public void setSerialNo(String serialNo) {
+        this.serialNo = serialNo;
     }
 
     public String getCutomerName() {
@@ -81,26 +80,21 @@ public class Data {
 //////////////////////////////////////////
 
 
+    public Data(String serialNo) {
+        this.serialNo = String.format("%03d",++serialCnt);
+    }
+
     public Data(String cutomerName, String customerID, double usingTime, int pay) {
+        this.serialNo = serialNo;
         this.cutomerName = cutomerName;
         this.customerID = customerID;
         this.usingTime = usingTime;
         this.pay = pay;
-        serialNo++;
+        serialNo = String.format("%03d",++serialCnt);
     }
 
     //////////////////////////////////////////
 
-
-
-
-
-    private static void data(){
-
-
-
-
-    }
 
 
 

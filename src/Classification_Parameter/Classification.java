@@ -9,7 +9,7 @@ public class Classification {
 
 
 
-    public static void classifiCation(){
+    public static void classifiCationMenu(){
 
 
     }
