@@ -2,6 +2,10 @@ package Customer_Data;
 import java.util.Scanner;
 import Exception.InputException;
 import java.util.InputMismatchException;
+
+import static Customer_Data.CustomerAdd.HowsizeAdd;
+
+
 public class Customer_Menu {
 
     public static int selectcustomerMenu() {
@@ -18,49 +22,46 @@ public class Customer_Menu {
         int menu = sc.nextInt();
         return menu;
 
-        }
+    }
 
 
+
+    /////////////////메뉴////////////////////////
     public static void CustomerMainMenu() {
-
+        Scanner sc = new Scanner(System.in);
+        int cnt = 1;
         while (true) {
-            try{
-                int menu = selectcustomerMenu();
-                if (menu == 1) {//고객 추가
-                    Customer.addData();
-                }
-                if (menu == 2) {//고객 정보 보기
-                    Customer.viewData();
-                }
-                if (menu == 3) {//고객 정보 수정
-                    Customer.updateData();
-                }
-                if (menu == 4) {//고객 정보 삭제
-                    Customer.deleteData();
-                }
-                if (menu == 5) {//뒤로가기
-                    System.out.println("뒤로가기.");
-                    break;
-                }
-                System.out.println("다시 입력해주세요.");
-            }catch (InputMismatchException e) {
-                System.out.println("다시 입력해주세요");
+            int choice = selectcustomerMenu();
+            if (choice == 1) {
+                CustomerAdd.addData();
+                continue;
             }
+            if (choice == 2) {
+                CustomerView.viewData();
+                continue;
+            }
+            if (choice == 3) {
+                //.updateData();
+                continue;
+            }
+            if (choice == 4) {
+                CustomerDelete.deleteData();
+                continue;
+            }
+            if (choice == 5)
+                break;
+            System.out.println("다시 입력해주세요");
         }
+
+
 
 
     }
-
-    //메뉴 선택
 
 
 
 
 }
-
-
-
-
 
 
     //public static void selectcustomerMenu(){

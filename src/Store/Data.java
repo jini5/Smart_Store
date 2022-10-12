@@ -4,11 +4,11 @@ import java.util.Objects;
 
 public class Data {
 
-    private String serialNo;
-    private String cutomerName;
-    private String customerID;
-    private double usingTime;
-    private int pay;
+    private static String serialNo;
+    private static String cutomerName;
+    private static String customerID;
+    private static double usingTime;
+    private static int pay;
 
     private static int serialCnt = 0 ;
     //////////////////////////////////////////
@@ -81,7 +81,7 @@ public class Data {
 
 
     public Data(String serialNo) {
-        this.serialNo = String.format("%03d",++serialCnt);
+        this.serialNo = String.format("%04d",++serialCnt);
     }
 
     public Data(String cutomerName, String customerID, double usingTime, int pay) {
@@ -90,7 +90,13 @@ public class Data {
         this.customerID = customerID;
         this.usingTime = usingTime;
         this.pay = pay;
-        serialNo = String.format("%03d",++serialCnt);
+        serialNo = String.format("%04d",++serialCnt);
+    }
+
+    public String showCustomer(){
+        String info = "serialNO:"+serialNo+", 고객 이름: "+cutomerName+", 고객 아이디: "+customerID+", 고객 사용 시간: "+usingTime+"시간, 고객 사용 총액: "
+                +pay+"원 입니다.";
+        return info;
     }
 
     //////////////////////////////////////////
