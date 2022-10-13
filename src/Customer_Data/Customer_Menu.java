@@ -4,6 +4,7 @@ import Exception.InputException;
 import java.util.InputMismatchException;
 
 import static Customer_Data.CustomerAdd.HowsizeAdd;
+import static Store.Main.selectMenu;
 
 
 public class Customer_Menu {
@@ -49,8 +50,9 @@ public class Customer_Menu {
                 continue;
             }
             if (choice == 5)
+                selectMenu();
                 break;
-            System.out.println("다시 입력해주세요");
+
         }
 
 

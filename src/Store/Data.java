@@ -7,10 +7,11 @@ public class Data {
     private static String serialNo;
     private static String cutomerName;
     private static String customerID;
-    private static double usingTime;
+    private static int usingTime;
     private static int pay;
 
     private static int serialCnt = 0 ;
+
     //////////////////////////////////////////
 
 
@@ -38,11 +39,11 @@ public class Data {
         this.customerID = customerID;
     }
 
-    public Double getUsingTime() {
+    public int getUsingTime() {
         return usingTime;
     }
 
-    public void setUsingTime(double usingTime) {
+    public void setUsingTime(int usingTime) {
         this.usingTime = usingTime;
     }
 
@@ -84,13 +85,14 @@ public class Data {
         this.serialNo = String.format("%04d",++serialCnt);
     }
 
-    public Data(String cutomerName, String customerID, double usingTime, int pay) {
+    public Data(String cutomerName, String customerID, int usingTime, int pay) {
+        ++serialCnt;
         this.serialNo = serialNo;
         this.cutomerName = cutomerName;
         this.customerID = customerID;
         this.usingTime = usingTime;
         this.pay = pay;
-        serialNo = String.format("%04d",++serialCnt);
+        serialNo = String.format("%04d",serialCnt);
     }
 
     public String showCustomer(){

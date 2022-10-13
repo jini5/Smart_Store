@@ -15,6 +15,8 @@ public class CustomerView {
             for(int i = 0; i< customerlist.length; i++){
                 System.out.println(customerlist[i].showCustomer());
             }
+
+
         }
 
     }

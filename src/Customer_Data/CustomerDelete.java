@@ -1,5 +1,7 @@
 package Customer_Data;
 
+import Store.Data;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -11,8 +13,20 @@ public class CustomerDelete {
     public static void deleteData(){
         Scanner sc = new Scanner(System.in);
         int deleteNo = DeleteNo();
+        Data[] deletelist = new Data[customerlist.length];
 
+        for(int i=0;i<deleteNo;i++){
+            deletelist[i]=customerlist[i];
+        }
+        for (int i = deleteNo;i<(customerlist.length-1);i++) {
+            deletelist[i] = customerlist[i + 1];
+        }
 
+        Data[] customerlist = new Data[deletelist.length];
+
+        for(int j =0 ; j< deletelist.length; j++){
+            customerlist[j] = deletelist[j];
+        }
 
 
     }

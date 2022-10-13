@@ -19,6 +19,7 @@ public class CustomerAdd {
 
 
 
+
     //////////////
 ///
     ///////////////////////////////////////
@@ -55,7 +56,7 @@ public class CustomerAdd {
                         name = sc.next();
                         break;
                     case 2:
-                        System.out.println((i + 1 )+ "번째 고객의 아이디를 입력해주세요");
+                        System.out.println((i + 1) + "번째 고객의 아이디를 입력해주세요");
                         System.out.print("입력: ");
                         ID = sc.next();
                         break;
@@ -70,14 +71,16 @@ public class CustomerAdd {
                         pay = sc.nextInt();
                         break;
                     case 5:
-                        System.out.println((i + 1)+ "번째 고객의 정보 입력을 종료합니다.\n");
+                        System.out.println((i + 1) + "번째 고객의 정보 입력을 종료합니다.\n");
                         result = false;
                         break;
                     default:
-                        System.out.println("올바른 형식이 아닙니다. 다시 입력해 주세요.");
+                        System.out.println("다시 입력해 주세요.");
+                        continue;
                 }
-            }
-            customerlist[Num+i] = new Data(name, ID,time, pay);
+
+            }customerlist[Num+i] = new Data(name, ID,time, pay);
+
         }
         Num += size;
         System.out.println("정보 입력 완료.");
@@ -108,6 +111,7 @@ public class CustomerAdd {
         Scanner sc = new Scanner(System.in);
         while(true){
             try{
+                System.out.println("==========================");
                 System.out.println("몇명의 고객을 입력하시겠습니까?");
                 System.out.println("종료하시려면 0을 입력해주세요");
                 System.out.print("입력: ");
@@ -116,14 +120,19 @@ public class CustomerAdd {
                     throw new InputMismatchException();
                 }return size;
             }catch (InputMismatchException e){
-                System.out.println("다시 입력하세요");
+                System.out.println("==========================");
+                System.out.println("다시 입력하세요.");
+                HowsizeAdd();
             }catch(NumberFormatException e){
                 System.out.println("다시 입력하세요");
+                HowsizeAdd();
             }catch (NegativeArraySizeException e){
                 System.out.println("다시 입력하세요");
+                HowsizeAdd();
             }
         }
     }
+
 
 
 

@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8dccc23b-2ed3-4ac3-bfc6-ddc1bb7d2851" name="Changes" comment="수정중">
-      <change afterPath="$PROJECT_DIR$/src/Customer_Data/CustomerAdd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Customer_Data/CustomerDelete.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Customer_Data/CustomerUpdate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Customer_Data/CustomerView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Customer_Data/Add_Customer_Data.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Customer_Data/CustomData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Customer_Data/Customer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Customer_Data/CustomerList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer_Data/CustomerList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Customer_Data/CustomerAdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer_Data/CustomerAdd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Customer_Data/CustomerDelete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer_Data/CustomerDelete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Customer_Data/CustomerView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer_Data/CustomerView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Customer_Data/Customer_Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer_Data/Customer_Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Store/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Store/Data.java" afterDir="false" />
     </list>
@@ -160,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665522338530</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="수정중">
+      <created>1665600170904</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1665600170904</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
