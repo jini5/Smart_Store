@@ -1,51 +1,49 @@
 package Classification_Parameter;
 import Exception.InputRangeException;
-import Exception.InputEmptyException;
-import Exception.InputFormatException;
 import Exception.Exception;
+import Store.Main;
 
 import java.util.Scanner;
 
-public class View_Parameter {
+public class Classification_Menu {
 
-
-    public static void viewParameter(){ //매개변수
-        Scanner sc = new Scanner(System.in);
-        int setmenu = selectviewMenu();
-        boolean status = false;
-        switch (setmenu){
+    public static void classifiCationMenu(){
+        int menu = classifiCationSelect();
+        boolean status=false;
+        switch (menu){
             case 1:
-                //general;
+                Set_Parameter.settingParameter();//분류기준 설정
                 break;
             case 2:
-                //vip;
+                Update_Parameter.updateParameter();//분류기준 수정
                 break;
             case 3:
-                //vvip;
+                View_Parameter.viewParameter();//분류기준 출력
                 break;
             case 4:
                 status = true;
                 break;
-            default:
-                System.out.println("올바른 형식이 아닙니다. 다시 입력해 주세요.");
-                Classification_Menu.classifiCationMenu();
-                break;
+        }
+
+        if(status){
+            Main.mainMenu();
+        }else if(!status){
+            classifiCationMenu();
         }
 
     }
 
-    /////////////////분류기준 확인 선택 메뉴/////////////////////
-    public static int selectviewMenu(){
+
+    public static int classifiCationSelect(){
         Scanner sc = new Scanner(System.in);
         while (true) {
             try {
                 System.out.println();
                 System.out.println("==============================");
-                System.out.println("분류 기준을 확인할 등급을 선택해 주세요");
-                System.out.println("1. GENERAL");
-                System.out.println("2. VIP");
-                System.out.println("3. VVIP");
-                System.out.println("4. 뒤로가기");
+                System.out.println(" 1. 분류기준 설정");
+                System.out.println(" 2. 분류기준 수정");
+                System.out.println(" 3. 분류기준 확인");
+                System.out.println(" 4. 뒤로가기");
                 System.out.println("==============================");
                 System.out.print("메뉴 선택: ");
                 int select = Exception.scannerInt();
@@ -59,12 +57,5 @@ public class View_Parameter {
             }
         }
     }
-
-    ////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
 
 }

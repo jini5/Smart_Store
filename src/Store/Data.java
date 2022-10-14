@@ -10,7 +10,13 @@ public class Data {
     private int usingTime;
     private int pay;
 
+    private Group group;
+    
     private static int serialCnt = 0 ;
+
+    public Data(String serialNo, String cutomerName, String customerID, int usingTime, int pay) {
+    }
+
 
     //////////////////////////////////////////
 
@@ -98,9 +104,6 @@ public class Data {
                 +pay+"원 입니다.";
         return info;
     }
-
-    //////////////////////////////////////////
-
 
 
 

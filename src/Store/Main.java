@@ -1,9 +1,7 @@
 package Store;
 import java.util.*;
-import Exception.InputFormatException;
-import Exception.InputRangeException;
-import Exception.InputEmptyException;
-import Classification_Parameter.Classification;
+
+import Classification_Parameter.Classification_Menu;
 import Summary.Summary;
 import Customer_Data.Customer_Menu;
 import java.util.InputMismatchException;
@@ -59,7 +57,7 @@ public class Main {
             try {
 
                 if (menu == 1) {// 고객 분류
-                    Classification.classifiCationMenu();
+                    Classification_Menu.classifiCationMenu();
                     continue;
                 }
                 if (menu == 2) {// 고객 정보
@@ -67,7 +65,7 @@ public class Main {
                     continue;
                 }
                 if (menu == 3) {// 요약
-                    Summary.summary();
+                    Summary.summaryMenu();
                     continue;
                 }
                 if (menu == 4) {// 종료
