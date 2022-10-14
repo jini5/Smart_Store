@@ -4,11 +4,11 @@ import java.util.Objects;
 
 public class Data {
 
-    private static String serialNo;
-    private static String cutomerName;
-    private static String customerID;
-    private static int usingTime;
-    private static int pay;
+    private String serialNo;
+    private String cutomerName;
+    private String customerID;
+    private int usingTime;
+    private int pay;
 
     private static int serialCnt = 0 ;
 
@@ -81,18 +81,16 @@ public class Data {
 //////////////////////////////////////////
 
 
-    public Data(String serialNo) {
-        this.serialNo = String.format("%04d",++serialCnt);
-    }
+
 
     public Data(String cutomerName, String customerID, int usingTime, int pay) {
-        ++serialCnt;
-        this.serialNo = serialNo;
+        serialCnt++;
         this.cutomerName = cutomerName;
         this.customerID = customerID;
         this.usingTime = usingTime;
         this.pay = pay;
         serialNo = String.format("%04d",serialCnt);
+
     }
 
     public String showCustomer(){

@@ -15,19 +15,19 @@ public class CustomerView {
             for(int i = 0; i< customerlist.length; i++){
                 System.out.println(customerlist[i].showCustomer());
             }
-
+            System.out.println("==============================");
 
         }
 
     }
 
     public  static  void viewToEdit(){
-        System.out.println("\n==============================");
+        System.out.println("==============================");
         int num = Num;
         for(int i=0;i<num;i++){
-            System.out.println("NO: "+(i+1)+" => "+customerlist[i].showCustomer());
+            System.out.println("NO: "+(i+1)+"  "+customerlist[i].showCustomer());
         }
-        System.out.println("==============================\n");
+        System.out.println("==============================");
     }
 
 }
