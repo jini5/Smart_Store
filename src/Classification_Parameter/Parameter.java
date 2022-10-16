@@ -1,4 +1,4 @@
-package Store;
+package Classification_Parameter;
 
 import java.util.Objects;
 
@@ -11,6 +11,10 @@ public class Parameter {
     public Parameter(int minTime, int minPayment) {
         this.minTime = minTime;
         this.minPayment = minPayment;
+    }
+
+    public Parameter() {
+
     }
 
     public int getMinTime() {

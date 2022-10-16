@@ -1,6 +1,6 @@
 package Customer_Data;
 
-import Store.Data;
+import Store.Customer;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -35,7 +35,7 @@ public class CustomerDelete {
     }
 
     public static void delete() {
-        Data[] deletelist = new Data[(Num - 1)];
+        Customer[] deletelist = new Customer[(Num - 1)];
         for (int i = 0; i < deleteNum; i++) {
             deletelist[i] = customerlist[i];
         }

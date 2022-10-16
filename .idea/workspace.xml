@@ -2,21 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8dccc23b-2ed3-4ac3-bfc6-ddc1bb7d2851" name="Changes" comment="수정중">
-      <change afterPath="$PROJECT_DIR$/src/Classification_Parameter/Classification_Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Store/Group.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Store/GroupType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Store/Groups.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Store/Parameter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Classification_Parameter/General.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Classification_Parameter/Group.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Classification_Parameter/Groups.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Classification_Parameter/VVip.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Classification_Parameter/Vip.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Store/Customers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classification_Parameter/Classification.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Classification_Parameter/Set_Parameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classification_Parameter/Set_Parameter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classification_Parameter/Summary.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classification_Parameter/Summary_Menu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classification_Parameter/Update_Parameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classification_Parameter/Update_Parameter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classification_Parameter/View_Parameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classification_Parameter/View_Parameter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Store/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Store/Data.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Store/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Store/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Summary/Summary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Summary/Summary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Customer_Data/CustomerAdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer_Data/CustomerAdd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Customer_Data/CustomerDelete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer_Data/CustomerDelete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Customer_Data/CustomerUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer_Data/CustomerUpdate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Store/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Store/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Store/Group.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Store/GroupType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classification_Parameter/GroupType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Store/Groups.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Store/Parameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classification_Parameter/Parameter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +76,7 @@
       <module name="Smart_Store" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Store.*" />
+          <option name="PATTERN" value="Classification_Parameter.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -185,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665727280837</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="수정중">
+      <created>1665778790512</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1665778790512</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -210,6 +218,10 @@
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
           <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="2" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>

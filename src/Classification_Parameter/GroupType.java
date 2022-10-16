@@ -1,9 +1,8 @@
-package Store;
+package Classification_Parameter;
 
 public enum GroupType {
 
-    NONE("), GENERAL("), VIP("), VVIP(");
-
+    NONE("해당없음"), GENERAL("일반고객"), VIP("우수고객"), VVIP("최우수고객");
     String groupType = "";
 
     GroupType(String groupType) {
@@ -11,7 +10,7 @@ public enum GroupType {
     }
 
     public String getGroupType() {
-        return this.groupType;
+        return groupType;
     }
 
     public void setGroupType(String groupType) {

@@ -1,6 +1,6 @@
 package Customer_Data;
 
-import Store.Data;
+import Store.Customer;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -13,18 +13,18 @@ public class CustomerAdd {
     //public static Data[] customerlist = new Data[Num];
 
     public static int Num = 11;
-    public static Data[] customerlist = {
-            new Data("bca",null,0,0),
-            new Data("abc",null,0,0),
-            new Data("A",null,0,0),
-            new Data("B",null,5,1000),
-            new Data("C",null,9,120000),
-            new Data("d",null,10,100000),
-            new Data("e",null,15,150000),
-            new Data("f",null,19,500000),
-            new Data("g",null,20,500000),
-            new Data("h",null,25,550000),
-           new Data("i",null,50,1000000)
+    public static Customer[] customerlist = {
+            new Customer("bca",null,0,0),
+            new Customer("abc",null,0,0),
+            new Customer("A",null,0,0),
+            new Customer("B",null,5,1000),
+            new Customer("C",null,9,120000),
+            new Customer("d",null,10,100000),
+            new Customer("e",null,15,150000),
+            new Customer("f",null,19,500000),
+            new Customer("g",null,20,500000),
+            new Customer("h",null,25,550000),
+           new Customer("i",null,50,1000000)
     };
 
 
@@ -78,7 +78,7 @@ public class CustomerAdd {
                 }
 
             }
-            customerlist[Num+i] = new Data(name, ID,time, pay);
+            customerlist[Num+i] = new Customer(name, ID,time, pay);
 
 
         }
@@ -127,7 +127,7 @@ public class CustomerAdd {
             Customer_Menu.CustomerMainMenu();
         }
 
-        Data[] newCustomerList = new Data[Num+size];
+        Customer[] newCustomerList = new Customer[Num+size];
         for(int i =0;i<customerlist.length;i++){
             newCustomerList[i]=customerlist[i];
         }
@@ -276,7 +276,7 @@ public class CustomerAdd {
     }
 
 
-    public static Data[] changeList(Data[] arr){
+    public static Customer[] changeList(Customer[] arr){
         Num--;
         customerlist=null;
         customerlist = arr;

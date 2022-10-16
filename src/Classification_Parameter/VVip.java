@@ -4,23 +4,21 @@ import Exception.Exception;
 
 import java.util.Scanner;
 
+public class VVip {
 
-public class Set_Parameter {
-    public static void settingParameter(){ //매개변수
+    public static void vvipmenu(){
+
         Scanner sc = new Scanner(System.in);
-        int setmenu = selectsetMenu();
+        int setmenu = selectVVMenu();
         boolean status = false;
         switch (setmenu){
             case 1: //general
-                General.generalmenu();
+
                 break;
             case 2:
-                Vip.vipmenu();
+
                 break;
             case 3:
-                VVip.vvipmenu();
-                break;
-            case 4:
                 status = true;
                 break;
             default:
@@ -31,23 +29,20 @@ public class Set_Parameter {
 
     }
 
-
-    /////////////////////////분류 기준 초기 설정/////////////////////////////////
-    public static int selectsetMenu(){
+    public static int selectVVMenu(){
         Scanner sc = new Scanner(System.in);
         while (true) {
             try {
                 System.out.println();
                 System.out.println("==============================");
-                System.out.println("분류 기준을 설정할 등급을 선택해 주세요");
-                System.out.println("1. GENERAL");
-                System.out.println("2. VIP");
-                System.out.println("3. VVIP");
-                System.out.println("4. 뒤로가기");
+                System.out.println("설정할 분류 기준을 선택해 주세요");
+                System.out.println("1. 최소 사용 시간");
+                System.out.println("2. 최소 사용 금액");
+                System.out.println("3. 뒤로가기");
                 System.out.println("==============================");
                 System.out.print("메뉴 선택: ");
                 int select = Exception.scannerInt();
-                if (select < 1 || select > 4)
+                if (select < 1 || select > 3)
                     throw new InputRangeException();
                 return select;
             } catch (NumberFormatException e) {
@@ -59,15 +54,8 @@ public class Set_Parameter {
     }
 
 
-////////////////////////////////////////////////////////////////////////////////////////
-
-
-}
-
-
-
-/*
-    public static void setParamMinimumSpentTime(Parameter param){
+    ////////////////////////////////////////////////
+    public static void setMinVVipSpentTime(Parameter param){
         Scanner sc = new Scanner(System.in);
         while(true){
             try{
@@ -85,7 +73,7 @@ public class Set_Parameter {
         }
     }
 
-    public static void setParamMinimumTotalPayment(Parameter param){
+    public static void setMinVVipTotalPayment(Parameter param){
         Scanner sc = new Scanner(System.in);
         while(true){
             try{
@@ -102,5 +90,4 @@ public class Set_Parameter {
             }
         }
     }
-
-*/
+}

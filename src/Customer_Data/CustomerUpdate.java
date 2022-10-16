@@ -1,7 +1,7 @@
 package Customer_Data;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import Store.Data;
+
 import static Customer_Data.CustomerAdd.customerlist;
 import static Customer_Data.Customer_Menu.CustomerMainMenu;
 
@@ -88,7 +88,7 @@ public class CustomerUpdate {
                 System.out.println("수정할 사용 금액을 작성해주세요");
                 System.out.print("입력: ");
                 int pay = CustomerAdd.payrule();
-                customerlist[updateNo].setPay(pay);
+                customerlist[updateNo].setTotalpay(pay);
                 break;
             case 5:
                 result = false;

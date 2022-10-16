@@ -1,20 +1,22 @@
 package Store;
 
+import Classification_Parameter.Group;
+
 import java.util.Objects;
 
-public class Data {
+public class Customer {
 
     private String serialNo;
     private String cutomerName;
     private String customerID;
     private int usingTime;
-    private int pay;
+    private int totalpay;
 
     private Group group;
-    
+
     private static int serialCnt = 0 ;
 
-    public Data(String serialNo, String cutomerName, String customerID, int usingTime, int pay) {
+    public Customer(String serialNo, String cutomerName, String customerID, int usingTime, int totalpay) {
     }
 
 
@@ -53,26 +55,34 @@ public class Data {
         this.usingTime = usingTime;
     }
 
-    public int getPay() {
-        return pay;
+    public int getTotalpay() {
+        return totalpay;
     }
 
-    public void setPay(int pay) {
-        this.pay = pay;
+    public void setTotalpay(int pay) {
+        this.totalpay = pay;
     }
+    public Group getGroup() {
+        return group;
+    }
+
+    public void setGroup(Group group) {
+        this.group = group;
+    }
+
     //////////////////////////////////////////
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Data data = (Data) o;
-        return getPay() == data.getPay() && Objects.equals(getCutomerName(), data.getCutomerName()) && Objects.equals(getCustomerID(), data.getCustomerID()) && Objects.equals(getUsingTime(), data.getUsingTime());
+        Customer customer = (Customer) o;
+        return getTotalpay() == customer.getTotalpay() && Objects.equals(getCutomerName(), customer.getCutomerName()) && Objects.equals(getCustomerID(), customer.getCustomerID()) && Objects.equals(getUsingTime(), customer.getUsingTime());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getCutomerName(), getCustomerID(), getUsingTime(), getPay());
+        return Objects.hash(getCutomerName(), getCustomerID(), getUsingTime(), getTotalpay());
     }
 
     @Override
@@ -81,7 +91,7 @@ public class Data {
                 "cutomerName='" + cutomerName + '\'' +
                 ", customerID='" + customerID + '\'' +
                 ", usingTime='" + usingTime + '\'' +
-                ", pay=" + pay +
+                ", pay=" + totalpay +
                 '}';
     }
 //////////////////////////////////////////
@@ -89,22 +99,21 @@ public class Data {
 
 
 
-    public Data(String cutomerName, String customerID, int usingTime, int pay) {
+    public Customer(String cutomerName, String customerID, int usingTime, int pay) {
         serialCnt++;
         this.cutomerName = cutomerName;
         this.customerID = customerID;
         this.usingTime = usingTime;
-        this.pay = pay;
+        this.totalpay = pay;
         serialNo = String.format("%04d",serialCnt);
 
     }
 
     public String showCustomer(){
         String info = "serialNO:"+serialNo+", 고객 이름: "+cutomerName+", 고객 아이디: "+customerID+", 고객 사용 시간: "+usingTime+"시간, 고객 사용 총액: "
-                +pay+"원 입니다.";
+                +totalpay+"원 입니다.";
         return info;
     }
-
 
 
 }
