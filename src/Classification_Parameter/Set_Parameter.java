@@ -1,7 +1,7 @@
 package Classification_Parameter;
 import Exception.InputRangeException;
 import Exception.Exception;
-
+import Store.*;
 import java.util.Scanner;
 
 
@@ -63,44 +63,3 @@ public class Set_Parameter {
 
 
 }
-
-
-
-/*
-    public static void setParamMinimumSpentTime(Parameter param){
-        Scanner sc = new Scanner(System.in);
-        while(true){
-            try{
-                System.out.println();
-                System.out.print("최소 총 이용 시간을 입력하세요 : ");
-                int minTime = sc.nextInt();
-                if( minTime < 0 ){
-                    throw new InputRangeException();
-                }
-                param.setMinTime(minTime);
-                return;
-            }catch(NumberFormatException | InputRangeException e1){
-                System.out.println(e1.getMessage());
-            }
-        }
-    }
-
-    public static void setParamMinimumTotalPayment(Parameter param){
-        Scanner sc = new Scanner(System.in);
-        while(true){
-            try{
-                System.out.println();
-                System.out.print("최소 총 결제 금액을 입력하세요 : ");
-                int minPayment = sc.nextInt();
-                if( minPayment < 0 ){
-                    throw new InputRangeException();
-                }
-                param.setMinPayment(minPayment);
-                return;
-            }catch(NumberFormatException | InputRangeException e1){
-                System.out.println(e1.getMessage());
-            }
-        }
-    }
-
-*/

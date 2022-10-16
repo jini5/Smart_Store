@@ -1,56 +1,77 @@
 package Classification_Parameter;
 import Exception.InputRangeException;
 import Exception.Exception;
-import Classification_Parameter.Parameter;
-import Classification_Parameter.Group;
-import Classification_Parameter.Groups;
-import Classification_Parameter.GroupType;
+import Classification_Parameter.*;
+import Store.*;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import static Classification_Parameter.GroupType.GENERAL;
+import static Customer_Data.CustomerAdd.customerlist;
+import static Store.Group.GroupByGeneral;
 
-public class General {
 
-    private static Groups groups;
-    private static GroupType type;
+public class General{
+
+    static int minTime;
+    static int minpay;
+
+    private static int minGTime =5;
+    private static int minGMoney=10000;
+    final private static String grade = "General";
+
+
+
+
+    public static int getGMinTime(){
+        return minGTime;
+    }
+    public static int getGMinMoney(){
+        return minGMoney;
+    }
+    public static void setGMinMoney(int money){
+        minGMoney = money;
+    }
+    public static int getMinMoney(){
+        return minGMoney;
+    }
+
+    public static void showGInfo(){
+        System.out.println(grade+"등급의 최소 사용시간은 "+minGTime+"시간 이며 최소 사용금액은 "+minGMoney+"원 입니다.");
+    }
+
 
     public static void generalmenu(){
-
         Scanner sc = new Scanner(System.in);
+        boolean result = true;
+        while (result) {
+            try {
+                int select = selectGMenu();
 
-        Group group = groups.find(GENERAL);
-        if( group != null && group.getParam() != null){
-            System.out.println("그룹이 이미 존재합니다.");
-            System.out.println("\n" + group);
-        } else {
-            Parameter param = new Parameter();
-            while (true) {
-                try {
-                    int paramChoice = selectGMenu();
-
-                    if (paramChoice == 1) {
-                        int minTime = setMinGeneralSpentTime();
-                        param.setMinTime(minTime);
-
-                    } else if (paramChoice == 2) {
-                        int minpay =setMinGeneralTotalPayment();
-                        param.setMinPayment(minpay);
-                    } else {
-                        if (paramChoice == 3) {
-                            break;
-                        }
-
+                switch (select) {
+                    case 1:
+                        minTime = setMinGeneralSpentTime();
+                        break;
+                    case 2:
+                        minpay =setMinGeneralTotalPayment();
+                        break;
+                    case 3:
+                        result = false;
+                        break;
+                    default:
+                        System.out.println("다시 입력해 주세요.");
                         System.out.println("입력값이 유효하지 않습니다. 다시 입력해주세요");
-                    }
-                } catch (InputMismatchException e) {
-                    System.out.println("잘못된 입력입니다. 숫자를 입력해주세요");
                 }
+            } catch (InputMismatchException e ) {
+                System.out.println("잘못된 입력입니다. 숫자를 입력해주세요");
             }
-            groups.add(new Group(type, param));
+
         }
+        Group.GroupByGeneral(minTime, minpay);
+
+
     }
+
 
 
 
@@ -77,8 +98,6 @@ public class General {
             }
         }
     }
-
-
 
 
     public static int setMinGeneralSpentTime(){

@@ -1,10 +1,12 @@
 package Store;
 
-import Classification_Parameter.Group;
+import Classification_Parameter.*;
 
 import java.util.Objects;
 
 public class Customer {
+
+
 
     private String serialNo;
     private String cutomerName;
@@ -12,7 +14,6 @@ public class Customer {
     private int usingTime;
     private int totalpay;
 
-    private Group group;
 
     private static int serialCnt = 0 ;
 
@@ -62,14 +63,6 @@ public class Customer {
     public void setTotalpay(int pay) {
         this.totalpay = pay;
     }
-    public Group getGroup() {
-        return group;
-    }
-
-    public void setGroup(Group group) {
-        this.group = group;
-    }
-
     //////////////////////////////////////////
 
     @Override
@@ -94,9 +87,6 @@ public class Customer {
                 ", pay=" + totalpay +
                 '}';
     }
-//////////////////////////////////////////
-
-
 
 
     public Customer(String cutomerName, String customerID, int usingTime, int pay) {
@@ -106,7 +96,6 @@ public class Customer {
         this.usingTime = usingTime;
         this.totalpay = pay;
         serialNo = String.format("%04d",serialCnt);
-
     }
 
     public String showCustomer(){
@@ -114,6 +103,15 @@ public class Customer {
                 +totalpay+"원 입니다.";
         return info;
     }
+//////////////////////////////////////
+
+
+
+
+
+
+
+
 
 
 }

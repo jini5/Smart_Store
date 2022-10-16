@@ -6,6 +6,9 @@ import java.util.Scanner;
 
 public class VVip {
 
+    private static int minVVTime =50;
+    private static int minVVMoney=1000000;
+
     public static void vvipmenu(){
 
         Scanner sc = new Scanner(System.in);
@@ -55,7 +58,7 @@ public class VVip {
 
 
     ////////////////////////////////////////////////
-    public static void setMinVVipSpentTime(Parameter param){
+    public static int setMinVVipSpentTime(){
         Scanner sc = new Scanner(System.in);
         while(true){
             try{
@@ -65,15 +68,14 @@ public class VVip {
                 if( minTime < 0 ){
                     throw new InputRangeException();
                 }
-                param.setMinTime(minTime);
-                return;
+                return minTime;
             }catch(NumberFormatException | InputRangeException e1){
                 System.out.println(e1.getMessage());
             }
         }
     }
 
-    public static void setMinVVipTotalPayment(Parameter param){
+    public static int setMinVVipTotalPayment(){
         Scanner sc = new Scanner(System.in);
         while(true){
             try{
@@ -83,11 +85,12 @@ public class VVip {
                 if( minPayment < 0 ){
                     throw new InputRangeException();
                 }
-                param.setMinPayment(minPayment);
-                return;
+                return minPayment;
             }catch(NumberFormatException | InputRangeException e1){
                 System.out.println(e1.getMessage());
             }
         }
+
+
     }
 }

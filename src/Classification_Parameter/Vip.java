@@ -6,6 +6,12 @@ import java.util.Scanner;
 
 public class Vip {
 
+
+    private static int minVTime =25;
+    private static int minVMoney=100000;
+
+
+
     public static void vipmenu(){
 
         Scanner sc = new Scanner(System.in);
@@ -56,7 +62,7 @@ public class Vip {
 
     ///////////////////////
 
-    public static void setMinVipSpentTime(Parameter param){
+    public static int setMinVipSpentTime(){
         Scanner sc = new Scanner(System.in);
         while(true){
             try{
@@ -66,15 +72,14 @@ public class Vip {
                 if( minTime < 0 ){
                     throw new InputRangeException();
                 }
-                param.setMinTime(minTime);
-                return;
+                return minTime;
             }catch(NumberFormatException | InputRangeException e1){
                 System.out.println(e1.getMessage());
             }
         }
     }
 
-    public static void setMinVipTotalPayment(Parameter param){
+    public static int setMinVipTotalPayment(){
         Scanner sc = new Scanner(System.in);
         while(true){
             try{
@@ -84,8 +89,7 @@ public class Vip {
                 if( minPayment < 0 ){
                     throw new InputRangeException();
                 }
-                param.setMinPayment(minPayment);
-                return;
+                return minPayment;
             }catch(NumberFormatException | InputRangeException e1){
                 System.out.println(e1.getMessage());
             }
