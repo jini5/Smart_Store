@@ -1,52 +1,56 @@
 package groups;
 import java.util.Objects;
-
+import Exception.*;
 public class Parameter {
-    private int minimumSpentTime;
-    private int minimumTotalPay;
+    private int spentTime;
+    private int totalPayment;
+
+    /**
+     * Constructor
+     */
 
     public Parameter() {
+
     }
 
-    public Parameter(int minimumSpentTime, int minimumTotalPay) {
-        this.minimumSpentTime = minimumSpentTime;
-        this.minimumTotalPay = minimumTotalPay;
+    public Parameter(int spentTime, int totalPayment) {
+        this.spentTime = spentTime;
+        this.totalPayment = totalPayment;
     }
 
-    public int getMinimumSpentTime() {
-        return minimumSpentTime;
+    /**
+     * getter, setter, toString()
+     */
+
+    public int getSpentTime() {
+        return spentTime;
     }
 
-    public void setMinimumSpentTime(int minimumSpentTime) {
-        this.minimumSpentTime = minimumSpentTime;
+    public void setSpentTime(int spentTime) throws InputRangeException {
+        if (spentTime >= 0) {
+            this.spentTime = spentTime;
+            System.out.println("최소 이용 시간이 입력되었습니다.");
+        }
+        else throw new InputRangeException("잘못된 값을 입력했습니다. 0 이상의 정수를 입력해주세요.\n");
     }
 
-    public int getMinimumTotalPay() {
-        return minimumTotalPay;
+    public int getTotalPayment() {
+        return totalPayment;
     }
 
-    public void setMinimumTotalPay(int minimumTotalPay) {
-        this.minimumTotalPay = minimumTotalPay;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Parameter parameter = (Parameter) o;
-        return minimumSpentTime == parameter.minimumSpentTime && minimumTotalPay == parameter.minimumTotalPay;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(minimumSpentTime, minimumTotalPay);
+    public void setTotalPayment(int totalPayment) throws InputRangeException{
+        if (totalPayment >= 0) {
+            this.totalPayment = totalPayment;
+            System.out.println("최소 이용 시간이 입력되었습니다.");
+        }
+        else throw new InputRangeException("잘못된 값을 입력했습니다. 0 이상의 정수를 입력해주세요.\n");
     }
 
     @Override
     public String toString() {
         return "Parameter{" +
-                "minimumSpentTime=" + minimumSpentTime +
-                ", minimumTotalPay=" + minimumTotalPay +
+                "spentTime=" + spentTime +
+                ", totalPayment=" + totalPayment +
                 '}';
     }
 }

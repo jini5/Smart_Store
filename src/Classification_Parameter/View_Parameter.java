@@ -1,67 +1,54 @@
 package Classification_Parameter;
 import Exception.InputRangeException;
-import Exception.InputEmptyException;
-import Exception.InputFormatException;
 import Exception.Exception;
+import groups.Group;
+import groups.GroupType;
 
+import java.util.Locale;
 import java.util.Scanner;
+import Store.Customers;
+import Store.Main;
+import groups.Groups;
+import groups.Group;
+import groups.GroupType;
+
+import java.util.InputMismatchException;
+import java.util.Locale;
+import static Classification_Parameter.Classification_Menu.isGradeExist;
+import static Classification_Parameter.Classification_Menu.selectGrade;
 
 public class View_Parameter {
 
+    static Group[] groups = Groups.getInstance().getGroups();
 
-    public static void viewParameter(){ //매개변수
-        Scanner sc = new Scanner(System.in);
-        int setmenu = selectviewMenu();
-        boolean status = false;
-        switch (setmenu){
-            case 1:
-                //general;
-                break;
-            case 2:
-                //vip;
-                break;
-            case 3:
-                //vvip;
-                break;
-            case 4:
-                status = true;
-                break;
-            default:
-                System.out.println("올바른 형식이 아닙니다. 다시 입력해 주세요.");
-                Classification_Menu.classifiCationMenu();
-                break;
-        }
 
-    }
 
-    /////////////////분류기준 확인 선택 메뉴/////////////////////
-    public static int selectviewMenu(){
-        Scanner sc = new Scanner(System.in);
+    public static void viewParameter() {
         while (true) {
-            try {
-                System.out.println();
-                System.out.println("==============================");
-                System.out.println("분류 기준을 확인할 등급을 선택해 주세요");
-                System.out.println("1. GENERAL");
-                System.out.println("2. VIP");
-                System.out.println("3. VVIP");
-                System.out.println("4. 뒤로가기");
-                System.out.println("==============================");
-                System.out.print("메뉴 선택: ");
-                int select = Exception.scannerInt();
-                if (select < 1 || select > 4)
-                    throw new InputRangeException();
-                return select;
-            } catch (NumberFormatException e) {
-                System.out.println("다시 입력하세요.");
-            } catch (InputRangeException e) {
-                System.out.println("다시 입력하세요.");
+            String input = selectGrade().toUpperCase(Locale.ROOT);
+            if (input.equals("END")) return;
+
+            if (input.equals("GENERAL") || input.equals("VIP") || input.equals("VVIP")) {
+                GroupType groupType = null;
+
+                for (GroupType mg : GroupType.values()) {
+                    if (mg.name().equals(input)) groupType = mg;
+                }
+
+                if (!isGradeExist(groupType)) {
+                    System.out.println("해당 등급 분류 기준이 존재하지 않습니다.\n");
+                    continue;
+                }
+
+                Group group = groups[groupType.getIndex()];
+                System.out.println("[그룹] " + groupType.getLabel());
+                System.out.println("이용 시간 : " + group.getParam().getSpentTime());
+                System.out.println("결제 금액 : " + group.getParam().getTotalPayment() + "\n");
+            } else {
+                System.out.println("잘못된 입력값입니다. 다시 입력해주세요.\n");
             }
         }
     }
-
-    ////////////////////////////////////////////////////////////////////////////////////////
-
 
 
 

@@ -1,57 +1,45 @@
 package groups;
-import java.util.Objects;
 
 
 public class Group {
-    private GroupType groupType;
-    private Parameter parameter;
 
-    public Group() {
+    private GroupType grade;
+    private Parameter param;
+    private int customer_num = 0;
+    private boolean isInitialized;
+
+    public Group(GroupType groupType) {
+        grade = groupType;
+        param = new Parameter();
+        isInitialized = false;
     }
 
-    public Group(GroupType groupType, Parameter parameter) {
-        this.groupType = groupType;
-        this.parameter = parameter;
+    /**
+     * getter, setter
+     */
+
+    public GroupType getGrade() {
+        return grade;
     }
 
-    public GroupType getGroupType() {
-        return groupType;
+    public Parameter getParam() {
+        return param;
     }
 
-    public void setGroupType(GroupType groupType) {
-        this.groupType = groupType;
+    public int getCustomer_num() {
+        return customer_num;
     }
 
-    public Parameter getParameter() {
-        return parameter;
+    public void setCustomer_num(int customer_num) {
+        this.customer_num = customer_num;
     }
 
-    public void setParameter(Parameter parameter) {
-        this.parameter = parameter;
+    public boolean isInitialized() {
+        return isInitialized;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Group group = (Group) o;
-        return groupType == group.groupType && parameter.equals(group.parameter);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(groupType, parameter);
-    }
-
-    @Override
-    public String toString() {
-        if (groupType == null) {
-            return "No group.";
-        } else if (parameter == null) {
-            return "GroupType : " + groupType + "\n Parameter: null";
-        } else {
-            return "GroupType : " + groupType + "\n Parameter: " + parameter;
-        }
+    public void setInitialized(boolean initialized) {
+        isInitialized = initialized;
     }
 
 }
