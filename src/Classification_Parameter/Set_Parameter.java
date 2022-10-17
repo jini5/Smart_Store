@@ -32,7 +32,7 @@ public class Set_Parameter {
                     continue;
                 }
                 groups[groupType.getIndex()].setInitialized(true);
-                Customers.setCustomers_memberGrade();
+                Customers.setCustomers_Type();
                 selectParameter(groupType);
             } else {
                 System.out.println("잘못된 입력값입니다. 다시 입력해주세요.");

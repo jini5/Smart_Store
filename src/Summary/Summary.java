@@ -4,9 +4,11 @@ import Classification_Parameter.Update_Parameter;
 import Classification_Parameter.View_Parameter;
 import Exception.InputRangeException;
 import Exception.Exception;
+import Store.Customers;
 import Store.Main;
 
 import java.util.Scanner;
+
 
 public class Summary {
 
@@ -16,7 +18,7 @@ public class Summary {
         boolean status = false;
         switch (menu) {
             case 1:
-                Summary_All.summaryall();
+                Customers.printCustomerSummary(Customers.getCustomers());
                 break;
             case 2:
                 Summary_Name.summaryName();

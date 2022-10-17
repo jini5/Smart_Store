@@ -62,46 +62,54 @@ public class CustomerUpdate {
 
     public  static void selectUpdate(){
         Scanner sc = new Scanner(System.in);
-        int menu = selectupdateMenu();
+
         boolean result = true;
 
-        switch (menu) {
-            case 1:
+        while (result) {
+            int menu = selectupdateMenu();
+            try {if(menu == 1){
                 System.out.println("수정할 이름을 작성해주세요");
                 System.out.print("입력: ");
                 String name = CustomerAdd.namerule();
                 customerlist[updateNo].setCutomerName(name);
                 break;
-            case 2:
+            }else if(menu ==2){
                 System.out.println("수정할 ID를 작성해주세요");
                 System.out.print("입력: ");
                 String ID = CustomerAdd.IDrule();
                 customerlist[updateNo].setCustomerID(ID);
                 break;
-            case 3:
+            }
+            else if(menu ==3){
                 System.out.println("수정할 사용 시간을 작성해주세요");
                 System.out.print("입력: ");
                 int time = CustomerAdd.timerule();
                 customerlist[updateNo].setUsingTime(time);
                 break;
-            case 4:
+            }
+            else if(menu ==4){
                 System.out.println("수정할 사용 금액을 작성해주세요");
                 System.out.print("입력: ");
                 int pay = CustomerAdd.payrule();
                 customerlist[updateNo].setTotalpay(pay);
                 break;
-            case 5:
+            }
+            else if(menu ==5){
                 result = false;
                 break;
-            default:
-                System.out.println("다시 입력해 주세요.");
-        }
+            }
+            System.out.println("다시 입력해주세요");
+
+        }catch(InputMismatchException e) {
+                System.out.println("다시 입력해주세요");
+            }
 
 
     }
 
-    ////////////////////
-    public static int selectupdateMenu(){
+}
+
+    private static int selectupdateMenu() {
         Scanner sc = new Scanner(System.in);
         while(true){
             try{
@@ -124,9 +132,4 @@ public class CustomerUpdate {
             }
         }
     }
-
-
-//////////////변경///////////////////////
-
-
 }

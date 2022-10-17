@@ -98,7 +98,7 @@ public class Classification_Menu {
                 while (true) {
                     try {
                         editSpentTime(groups[groupType.getIndex()]);
-                        Customers.setCustomers_memberGrade();
+                        Customers.setCustomers_Type();
                         break;
                     } catch (InputMismatchException inputMismatchException) {
                         System.out.println("잘못된 값을 입력했습니다. 0 이상의 정수를 입력해주세요.\n");
@@ -108,7 +108,7 @@ public class Classification_Menu {
                 while (true) {
                     try {
                         editTotalPayment(groups[groupType.getIndex()]);
-                        Customers.setCustomers_memberGrade();
+                        Customers.setCustomers_Type();
                         break;
                     } catch (InputMismatchException inputMismatchException) {
                         sc = new Scanner(System.in);

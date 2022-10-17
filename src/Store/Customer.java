@@ -32,10 +32,6 @@ public class Customer {
         return serialNo;
     }
 
-    public void setSerialNo(String serialNo) {
-        this.serialNo = serialNo;
-    }
-
     public String getCutomerName() {
         return cutomerName;
     }
@@ -68,13 +64,8 @@ public class Customer {
         this.totalpay = pay;
     }
 
-    public GroupType getGroupType() {
-        return groupType;
-    }
 
-    public void setGroupType(GroupType groupType) {
-        this.groupType = groupType;
-    }
+
     //////////////////////////////////////////
 
     @Override
@@ -124,7 +115,7 @@ public class Customer {
 
 
 
-    public GroupType getMemberGrade() {
+    public GroupType getGroupType() {
         return groupType;
     }
 
@@ -134,7 +125,7 @@ public class Customer {
         }
         return null;
     }
-    public void setMemberGrade() {
+    public void setGroupType() {
         Group now_group = findGroup();
         now_group.setCustomer_num(now_group.getCustomer_num() - 1);
 

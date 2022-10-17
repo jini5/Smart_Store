@@ -7,6 +7,7 @@ import groups.Groups;
 import java.util.Arrays;
 import Summary.*;
 
+import static Customer_Data.CustomerAdd.Num;
 import static Customer_Data.CustomerAdd.customerlist;
 
 public class Customers {
@@ -34,18 +35,18 @@ public class Customers {
     // 이름순 정렬
     public static void sortByCustomerName(int isAscending) {
         if (isAscending == 0) return;
-        Customer[] temp = new Customer[customerNum];
-        System.arraycopy(customers, 0, temp, 0, customerNum);
+        Customer[] temp = new Customer[Num];
+        System.arraycopy(customerlist, 0, temp, 0, Num);
 
-        Arrays.sort(temp, new Summary_Name.CustomerNameComparator(isAscending));
+        Arrays.sort(temp, new CustomerNameComparator(isAscending));
         printCustomerSummary(temp);
     }
 
     // 총 이용시간순 정렬
     public static void sortByCustomerSpentTIme(int isAscending) {
         if (isAscending == 0) return;
-        Customer[] temp = new Customer[customerNum];
-        System.arraycopy(customers, 0, temp, 0, customerNum);
+        Customer[] temp = new Customer[Num];
+        System.arraycopy(customerlist, 0, temp, 0, Num);
 
         Arrays.sort(temp, new CustomerSpentTimeComparator(isAscending));
         printCustomerSummary(temp);
@@ -54,8 +55,8 @@ public class Customers {
     // 총 결제금액순 정렬
     public static void sortByCustomerTotalPayment(int isAscending) {
         if (isAscending == 0) return;
-        Customer[] temp = new Customer[customerNum];
-        System.arraycopy(customers, 0, temp, 0, customerNum);
+        Customer[] temp = new Customer[Num];
+        System.arraycopy(customerlist, 0, temp, 0, Num);
 
         Arrays.sort(temp, new CustomerTotalPaymentComparator(isAscending));
         printCustomerSummary(temp);
@@ -68,8 +69,8 @@ public class Customers {
             System.out.println(label + " 그룹 : " + group.getCustomer_num() + "명");
             if (group.isInitialized()) System.out.println("[조건] " + group.getParam());
             else System.out.println("[조건] 아직 존재하지 않습니다." );
-            for (Customer customer : customers) {
-                if (customer.getMemberGrade() == group.getGrade()) System.out.println(customer);
+            for (Customer customer : customerlist) {
+                if (customer.getGroupType() == group.getGrade()) System.out.println(customer);
             }
             System.out.println("");
         }
@@ -81,13 +82,13 @@ public class Customers {
      * getter, setter
      */
 
-    public Customer[] getCustomers() {
+    public static Customer[] getCustomers() {
         return customers;
     }
 
-    public static void setCustomers_memberGrade() {
+    public static void setCustomers_Type() {
         for (Customer customer : customers)
-            customer.setMemberGrade();
+            customer.setGroupType();
     }
 
 }

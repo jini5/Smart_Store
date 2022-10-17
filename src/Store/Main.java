@@ -58,15 +58,15 @@ public class Main {
 
                 if (menu == 1) {// 고객 분류
                     Classification_Menu.classifiCationMenu();
-                    continue;
+                    break;
                 }
                 if (menu == 2) {// 고객 정보
                     Customer_Menu.CustomerMainMenu();
-                    continue;
+                    break;
                 }
                 if (menu == 3) {// 요약
                     Summary.summaryMenu();
-                    continue;
+                    break;
                 }
                 if (menu == 4) {// 종료
                     System.out.println("프로그램을 종료합니다.");

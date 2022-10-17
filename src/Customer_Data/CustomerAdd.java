@@ -14,8 +14,8 @@ public class CustomerAdd {
 
     public static int Num = 11;
     public static Customer[] customerlist = {
-            new Customer("bca",null,0,0),
-            new Customer("abc",null,0,0),
+            new Customer("bca",null,60,200000),
+            new Customer("abc",null,55,150000),
             new Customer("A",null,0,0),
             new Customer("B",null,5,1000),
             new Customer("C",null,9,120000),
