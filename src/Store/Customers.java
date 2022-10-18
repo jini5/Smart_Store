@@ -37,7 +37,7 @@ public class Customers {
         if (isAscending == 0) return;
         Customer[] temp = new Customer[Num];
         System.arraycopy(customerlist, 0, temp, 0, Num);
-
+        new CustomerNameComparator(isAscending);
         Arrays.sort(temp, new CustomerNameComparator(isAscending));
         printCustomerSummary(temp);
     }
