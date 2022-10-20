@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8dccc23b-2ed3-4ac3-bfc6-ddc1bb7d2851" name="Changes" comment="수정중 요약하는 부분 모르겠다.">
+    <list default="true" id="8dccc23b-2ed3-4ac3-bfc6-ddc1bb7d2851" name="Changes" comment="나는 멍청이다">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classification_Parameter/general.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classification_Parameter/general.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Store/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Store/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Store/Customers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Store/Customers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Store/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Store/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Summary/Summary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Summary/Summary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Summary/SummaryByName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Summary/SummaryByName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Summary/SummaryByPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Summary/SummaryByPayment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Summary/SummaryBySpentTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Summary/SummaryBySpentTime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Summary/SummaryMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Summary/SummaryMain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +103,7 @@
       <workItem from="1666237843978" duration="10000" />
       <workItem from="1666254954736" duration="2185000" />
       <workItem from="1666260628589" duration="175000" />
-      <workItem from="1666261217874" duration="6757000" />
+      <workItem from="1666261217874" duration="8440000" />
     </task>
     <task id="LOCAL-00001" summary="수정중">
       <created>1665303131596</created>
@@ -244,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666266947745</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="나는 멍청이다">
+      <created>1666268202210</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1666268202210</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,7 +280,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="수정중" />
     <MESSAGE value="수정중 요약하는 부분 모르겠다." />
-    <option name="LAST_COMMIT_MESSAGE" value="수정중 요약하는 부분 모르겠다." />
+    <MESSAGE value="나는 멍청이다" />
+    <option name="LAST_COMMIT_MESSAGE" value="나는 멍청이다" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

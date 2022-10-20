@@ -75,8 +75,7 @@ public class Main {
                 Customer_Menu.CustomerMainMenu();
                 break;
             case 3:
-                groupTypeSet();
-                //SummaryMain.SummaryMenu();
+                SummaryMain.SummaryMenu();
                 break;
             case 4:
                 System.out.println("프로그램을 종료합니다.");

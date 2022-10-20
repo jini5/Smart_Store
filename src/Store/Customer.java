@@ -96,7 +96,7 @@ public class Customer {
 
     @Override
     public String toString() {
-        return "Customer{" +
+        return "Customer {" +
                 "memberType=" + memberType +
                 ", serialNo='" + serialNo + '\'' +
                 ", cutomerName='" + cutomerName + '\'' +

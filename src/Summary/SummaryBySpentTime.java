@@ -3,6 +3,9 @@ package Summary;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import static Summary.Summary.*;
+import static Summary.Summary.getNoneList;
+
 public class SummaryBySpentTime {
     public static void showByTime_Menu() {
         int menu = selectMenu();
@@ -51,9 +54,49 @@ public class SummaryBySpentTime {
 
 
 
+    
+    
+    public static void viewTimeTypeA(){
+        groupTypeSet();
+        System.out.println("\n ====사용 시간순 출력====\n");
+        System.out.println("** VVIP등급 **");
+        for(int i = 0; i< getVVipList().length; i++){
+            //System.out.println(getVVipList()[i]);
+        }
+        System.out.println("\n** VIP등급 **");
+        for(int i = 0; i< getVipList().length; i++){
+            //System.out.println(getVipList()[i]);
+        }
+        System.out.println("\n** GENERAL등급 **");
+        for(int i = 0; i< getGeneralList().length; i++){
+            //System.out.println(getGeneralList()[i]);
+        }
+        System.out.println("\n** NONE등급 **");
+        for(int i = 0; i< getNoneList().length; i++){
+            //System.out.println(getNoneList()[i]);
+        }
 
-    public static  void printsorttime(){
+    }
 
+    public static void viewTimeTypeD(){
+        groupTypeSet();
+        System.out.println("\n ====사용 시간순 출력====\n");
+        System.out.println("** VVIP등급 **");
+        for(int i = 0; i< getVVipList().length; i++){
+            //System.out.println(getVVipList()[i]);
+        }
+        System.out.println("\n** VIP등급 **");
+        for(int i = 0; i< getVipList().length; i++){
+            //System.out.println(getVipList()[i]);
+        }
+        System.out.println("\n** GENERAL등급 **");
+        for(int i = 0; i< getGeneralList().length; i++){
+            //System.out.println(getGeneralList()[i]);
+        }
+        System.out.println("\n** NONE등급 **");
+        for(int i = 0; i< getNoneList().length; i++){
+            //System.out.println(getNoneList()[i]);
+        }
 
     }
 

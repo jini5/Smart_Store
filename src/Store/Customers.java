@@ -57,7 +57,7 @@ public class Customers {
     static int gIdx = 0;
     static int vIdx = 0;
     static int vvIdx = 0;
-
+/*
     public static void groupByCustomerName(){
 
         Customers NoneNameList = new Customers(customerlist.length);
@@ -126,7 +126,7 @@ public class Customers {
 
     }
 
-    /*
+
 
     public static void groupByCustomerTime(){
 

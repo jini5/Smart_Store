@@ -7,10 +7,26 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import static Customer_Data.CustomerAdd.customerlist;
+import static Summary.Summary.*;
 
 public class SummaryByName {
 
+    public static void showByName_Menu() {
+        int menu = selectMenu();
+        switch (menu) {
+            case 1:
+                //오름차순
+                break;
+            case 2:
+                //내림차순
+                break;
+            case 3:
+                System.out.println("프로그램을 종료합니다.");
+                break;
+        }
 
+
+    }
 
     public static int selectMenu() {
         while (true) {
@@ -40,6 +56,50 @@ public class SummaryByName {
         }
     }
 
+
+    public static void viewNameTypeA(){
+        groupTypeSet();
+        System.out.println("\n ====이름순 출력====\n");
+        System.out.println("** VVIP등급 **");
+        for(int i = 0; i< getVVipList().length; i++){
+            //System.out.println(getVVipList()[i]);
+        }
+        System.out.println("\n** VIP등급 **");
+        for(int i = 0; i< getVipList().length; i++){
+            //System.out.println(getVipList()[i]);
+        }
+        System.out.println("\n** GENERAL등급 **");
+        for(int i = 0; i< getGeneralList().length; i++){
+            //System.out.println(getGeneralList()[i]);
+        }
+        System.out.println("\n** NONE등급 **");
+        for(int i = 0; i< getNoneList().length; i++){
+            //System.out.println(getNoneList()[i]);
+        }
+
+    }
+
+    public static void viewNameTypeD(){
+        groupTypeSet();
+        System.out.println("\n ====이름순 출력====\n");
+        System.out.println("** VVIP등급 **");
+        for(int i = 0; i< getVVipList().length; i++){
+            //System.out.println(getVVipList()[i]);
+        }
+        System.out.println("\n** VIP등급 **");
+        for(int i = 0; i< getVipList().length; i++){
+            //System.out.println(getVipList()[i]);
+        }
+        System.out.println("\n** GENERAL등급 **");
+        for(int i = 0; i< getGeneralList().length; i++){
+            //System.out.println(getGeneralList()[i]);
+        }
+        System.out.println("\n** NONE등급 **");
+        for(int i = 0; i< getNoneList().length; i++){
+            //System.out.println(getNoneList()[i]);
+        }
+
+    }
 
 
 

@@ -16,11 +16,10 @@ public class SummaryMain {
         int menu = selectMenu();
         switch (menu) {
             case 1:
-                //CustomerView.viewData();;
-                // groupTypeSet();
+                Summary.viewGroupType();
                 break;
             case 2:
-                Customers.groupByCustomerName();//이름
+                SummaryByName.showByName_Menu();//이름
                 break;
             case 3:
                 SummaryBySpentTime.showByTime_Menu();//시간

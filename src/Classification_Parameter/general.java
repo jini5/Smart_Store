@@ -53,13 +53,13 @@ public class general extends none{
                 }return menu;
             }catch (InputMismatchException e){
                 System.out.println("==========================");
-                System.out.println("다시 입력하세요");
+                System.out.println("다시 입력하세요\n");
             }catch(NumberFormatException e){
                 System.out.println("==========================");
-                System.out.println("다시 입력하세요");
+                System.out.println("다시 입력하세요\n");
             }catch (NegativeArraySizeException e){
-                System.out.println("==========================");
-                System.out.println("다시 입력하세요");
+                System.out.println("==========================\n");
+                System.out.println("다시 입력하세요\n");
             }
         }
     }

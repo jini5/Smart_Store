@@ -127,13 +127,33 @@ public class Summary {
             }
         }
 
-        for(int i = 0; i< VVipList.length; i++){
-            System.out.println(VVipList[i]);
-        }
 
     }
 
 
+
+
+    public static void viewGroupType(){
+        groupTypeSet();
+        System.out.println("\n ====등록순 출력====\n");
+        System.out.println("** VVIP등급 **");
+        for(int i = 0; i< VVipList.length; i++){
+            System.out.println(VVipList[i]);
+        }
+        System.out.println("\n** VIP등급 **");
+        for(int i = 0; i< VipList.length; i++){
+            System.out.println(VipList[i]);
+        }
+        System.out.println("\n** GENERAL등급 **");
+        for(int i = 0; i< GeneralList.length; i++){
+            System.out.println(GeneralList[i]);
+        }
+        System.out.println("\n** NONE등급 **");
+        for(int i = 0; i< NoneList.length; i++){
+            System.out.println(NoneList[i]);
+        }
+
+    }
 
 
 }
