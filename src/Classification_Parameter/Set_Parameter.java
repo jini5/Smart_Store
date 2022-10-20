@@ -12,26 +12,34 @@ import static Classification_Parameter.Parameter_Menu.*;
 
 public class Set_Parameter {
 
-    public static void setParameter() { // GradeMenu 1번 - 분류 기준 초기 설정
+    public static void setParameter() {
+        boolean result = true;
+        while (result) {
+            int menu = set_menu();
+            try {
+                if (menu == 1) {//GENERAL
+                    general.set();
+                    break;
+                }
+                if (menu == 2) {// VIP
+                    vip.set();
+                    break;
+                }
+                if (menu == 3) {// VVIP
+                    vvip.set();
+                    break;
+                }
+                if (menu == 4) {// 종료
+                    System.out.println("프로그램을 종료합니다.");
+                    result = false;
+                    break;
+                }
+                System.out.println("다시 입력해주세요");
+            } catch (InputMismatchException e) {
+                System.out.println("다시 입력해주세요");
 
-        int menu = set_menu();
-        switch (menu) {
-            case 1:
-                general.set();
-                break;
-            case 2:
-                vip.set();
-                break;
-            case 3:
-                vvip.set();
-                break;
-            case 4:
-                System.out.println("프로그램을 종료합니다.");
-                classifiCationMenu();
-                break;
+            }
         }
-
-
     }
 
         public static int set_menu() {

@@ -126,6 +126,8 @@ public class Customers {
 
     }
 
+    /*
+
     public static void groupByCustomerTime(){
 
         Customers NoneTimeList = new Customers(customerlist.length);
@@ -189,7 +191,7 @@ public class Customers {
         }
 
     }
-
+*/
 
 }
 

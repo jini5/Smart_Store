@@ -12,6 +12,8 @@ import java.util.InputMismatchException;
 
 import static Classification_Parameter.Parameter_Menu.classifiCationMenu;
 
+import static Summary.Summary.groupTypeSet;
+
 public class Main {
 
     public static void main(String[] srgs){
@@ -73,7 +75,8 @@ public class Main {
                 Customer_Menu.CustomerMainMenu();
                 break;
             case 3:
-                SummaryMain.SummaryMenu();
+                groupTypeSet();
+                //SummaryMain.SummaryMenu();
                 break;
             case 4:
                 System.out.println("프로그램을 종료합니다.");
