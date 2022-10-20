@@ -119,7 +119,7 @@ public class Customer {
 
     public String showCustomer(){
         String info = "serialNO:"+serialNo+", 고객 이름: "+cutomerName+", 고객 아이디: "+customerID+", 고객 사용 시간: "+usingTime+"시간, 고객 사용 총액: "
-                +totalpay+"원 입니다.";
+                +totalpay+"원, 등급: "+memberType+"입니다.";
         return info;
     }
 

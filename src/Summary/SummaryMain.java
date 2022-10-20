@@ -9,6 +9,8 @@ import Store.*;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import static Classification_Parameter.Parameter_Menu.groupTypeSet;
+
 
 public class SummaryMain {
     public static void SummaryMenu(){
@@ -16,7 +18,7 @@ public class SummaryMain {
         switch (menu) {
             case 1:
                 //CustomerView.viewData();;
-                Summary.groupTypeSet();
+                groupTypeSet();
                 break;
             case 2:
                 Customers.groupByCustomerName();//이름
