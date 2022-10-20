@@ -67,7 +67,8 @@ public class CustomerUpdate {
 
         while (result) {
             int menu = selectupdateMenu();
-            try {if(menu == 1){
+            try {
+                if(menu == 1){
                 System.out.println("수정할 이름을 작성해주세요");
                 System.out.print("입력: ");
                 String name = CustomerAdd.namerule();

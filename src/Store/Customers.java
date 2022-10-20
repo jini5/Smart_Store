@@ -1,6 +1,4 @@
 package Store;
-import Summary.Summary_SpentTime;
-import Summary.Summary_TotalPayment;
 import groups.Group;
 import groups.Groups;
 
@@ -62,7 +60,7 @@ public class Customers {
         printCustomerSummary(temp);
     }
 
-    public static void printCustomerSummary(Customer[] customers) {
+    public static void printCustomerSummary(Customer[] customerlist) {
         for (Group group : groups) {
             String label = group.getGrade().getLabel();
             System.out.println("==============================");
@@ -83,12 +81,12 @@ public class Customers {
      */
 
     public static Customer[] getCustomers() {
-        return customers;
+        return customerlist;
     }
 
-    public static void setCustomers_Type() {
-        for (Customer customer : customers)
-            customer.setGroupType();
+    public static void setCustomers_memberGrade() {
+        for (Customer customer : customerlist)
+            customer.setMemberGrade();
     }
 
 }

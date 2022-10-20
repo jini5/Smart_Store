@@ -7,8 +7,7 @@ public class CustomerNameComparator implements Comparator<Customer> {
     int sign = 1;
 
     public CustomerNameComparator(int isAscending) {
-        sign = isAscending;
-
+        sign *= isAscending;
     }
 
     @Override

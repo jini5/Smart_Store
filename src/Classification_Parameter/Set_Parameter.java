@@ -1,15 +1,9 @@
 package Classification_Parameter;
-import Exception.InputRangeException;
-import Exception.Exception;
-import Store.Customer;
 import Store.Customers;
-import Store.Main;
-import groups.Groups;
-import groups.Group;
-import groups.GroupType;
+import groups.MemberGrade;
 
-import java.util.InputMismatchException;
 import java.util.Locale;
+import java.util.Scanner;
 
 import static Classification_Parameter.Classification_Menu.*;
 
@@ -21,26 +15,26 @@ public class Set_Parameter {
             if (input.equals("END")) return;
 
             if (input.equals("GENERAL") || input.equals("VIP") || input.equals("VVIP")) {
-                GroupType groupType = null;
+                MemberGrade memberGrade = null;
 
-                for (GroupType mg : GroupType.values()) {
-                    if (mg.name().equals(input)) groupType = mg;
+                for (MemberGrade mg : MemberGrade.values()) {
+                    if (mg.name().equals(input)) memberGrade = mg;
                 }
 
-                if (isGradeExist(groupType)) {
+                if (isGradeExist(memberGrade)) {
                     System.out.println("해당 등급 분류 기준이 이미 존재합니다.\n");
                     continue;
                 }
-                groups[groupType.getIndex()].setInitialized(true);
-                Customers.setCustomers_Type();
-                selectParameter(groupType);
+                groups[memberGrade.getIndex()].setInitialized(true);
+                Customers.setCustomers_memberGrade();
+                selectParameter(memberGrade);
             } else {
-                System.out.println("잘못된 입력값입니다. 다시 입력해주세요.");
+                System.out.println("다시 입력하세요.");
             }
         }
     }
 
-   }
+}
 
 
 

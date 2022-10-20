@@ -14,6 +14,7 @@ public class Parameter {
     }
 
     public Parameter(int spentTime, int totalPayment) {
+
         this.spentTime = spentTime;
         this.totalPayment = totalPayment;
     }

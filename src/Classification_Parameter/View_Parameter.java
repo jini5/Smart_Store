@@ -1,19 +1,11 @@
 package Classification_Parameter;
-import Exception.InputRangeException;
-import Exception.Exception;
-import groups.Group;
-import groups.GroupType;
 
-import java.util.Locale;
-import java.util.Scanner;
-import Store.Customers;
-import Store.Main;
+import groups.Group;
+import groups.MemberGrade;
 import groups.Groups;
-import groups.Group;
-import groups.GroupType;
 
-import java.util.InputMismatchException;
 import java.util.Locale;
+
 import static Classification_Parameter.Classification_Menu.isGradeExist;
 import static Classification_Parameter.Classification_Menu.selectGrade;
 
@@ -29,23 +21,23 @@ public class View_Parameter {
             if (input.equals("END")) return;
 
             if (input.equals("GENERAL") || input.equals("VIP") || input.equals("VVIP")) {
-                GroupType groupType = null;
+                MemberGrade memberGrade = null;
 
-                for (GroupType mg : GroupType.values()) {
-                    if (mg.name().equals(input)) groupType = mg;
+                for (MemberGrade mg : MemberGrade.values()) {
+                    if (mg.name().equals(input)) memberGrade = mg;
                 }
 
-                if (!isGradeExist(groupType)) {
+                if (!isGradeExist(memberGrade)) {
                     System.out.println("해당 등급 분류 기준이 존재하지 않습니다.\n");
                     continue;
                 }
 
-                Group group = groups[groupType.getIndex()];
-                System.out.println("[그룹] " + groupType.getLabel());
+                Group group = groups[memberGrade.getIndex()];
+                System.out.println("[그룹] " + memberGrade.getLabel());
                 System.out.println("이용 시간 : " + group.getParam().getSpentTime());
-                System.out.println("결제 금액 : " + group.getParam().getTotalPayment() + "\n");
+                System.out.println("사용 금액 : " + group.getParam().getTotalPayment() + "\n");
             } else {
-                System.out.println("잘못된 입력값입니다. 다시 입력해주세요.\n");
+                System.out.println("다시 입력하세요.\n");
             }
         }
     }

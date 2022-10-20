@@ -3,13 +3,13 @@ package groups;
 
 public class Group {
 
-    private GroupType grade;
+    private MemberGrade grade;
     private Parameter param;
     private int customer_num = 0;
     private boolean isInitialized;
 
-    public Group(GroupType groupType) {
-        grade = groupType;
+    public Group(MemberGrade memberGrade) {
+        grade = memberGrade;
         param = new Parameter();
         isInitialized = false;
     }
@@ -18,7 +18,7 @@ public class Group {
      * getter, setter
      */
 
-    public GroupType getGrade() {
+    public MemberGrade getGrade() {
         return grade;
     }
 

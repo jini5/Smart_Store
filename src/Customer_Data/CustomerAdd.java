@@ -10,7 +10,7 @@ public class CustomerAdd {
 
     static boolean result = true;
     //public static int Num=0;
-    //public static Data[] customerlist = new Data[Num];
+    //public static Customer[] customerlist = new Customer[Num];
 
     public static int Num = 11;
     public static Customer[] customerlist = {

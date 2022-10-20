@@ -1,14 +1,14 @@
 package Classification_Parameter;
-import Exception.InputRangeException;
+
 import Exception.Exception;
+import Exception.InputRangeException;
 import Store.Customers;
 import Store.Main;
-import groups.Groups;
 import groups.Group;
-import groups.GroupType;
+import groups.MemberGrade;
+import groups.Groups;
 
 import java.util.InputMismatchException;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Classification_Menu {
@@ -71,18 +71,62 @@ public class Classification_Menu {
     ////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-
-
-
     public static String selectGrade() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("** \'end\'를 입력하면 메뉴로 되돌아갑니다. **");
-        System.out.print("등급을 선택하세요. (GENERAL, VIP, VVIP) : ");
-        String input = sc.next();
-        return input;
+        int menu =selectmenu();
+
+        String input;
+        if(menu == 1){
+            input = "GENERAL";
+            return input;
+        }else if(menu == 2){
+            input = "VIP";
+            return input;
+        }else if(menu == 3){
+            input = "VVIP";
+            return input;
+        }else if(menu == 4){
+            input ="end";
+            return input;
+        }
+
+        return null;
     }
 
-    public static void selectParameter(GroupType groupType) {
+    public static int selectmenu(){
+        while (true) {
+            Scanner sc = new Scanner(System.in);
+            try {
+
+                System.out.println("** 등급을 선택하세요. **");
+                System.out.println("1. GENERAL");
+                System.out.println("2. VIP");
+                System.out.println("3. VVIP");
+                System.out.println("4. 뒤로가기");
+                System.out.println("====================");
+                System.out.print("메뉴 선택: ");
+                int menu = Integer.parseInt(sc.next());
+                if (menu < 1 || menu>4) {
+                    throw new InputMismatchException();
+                }
+                return menu;
+            } catch (InputMismatchException e) {
+                System.out.println("==========================");
+                System.out.println("다시 입력하세요");
+            } catch (NumberFormatException e) {
+                System.out.println("==========================");
+                System.out.println("다시 입력하세요");
+            } catch (NegativeArraySizeException e) {
+                System.out.println("==========================");
+                System.out.println("다시 입력하세요");
+            }
+        }
+
+    }
+
+
+
+    public static void selectParameter(MemberGrade memberGrade) {
         Scanner sc = new Scanner(System.in);
         while (true) {
             System.out.println("==============================");
@@ -97,22 +141,22 @@ public class Classification_Menu {
             if (input == 1) { // 시간
                 while (true) {
                     try {
-                        editSpentTime(groups[groupType.getIndex()]);
-                        Customers.setCustomers_Type();
+                        editSpentTime(groups[memberGrade.getIndex()]);
+                        Customers.setCustomers_memberGrade();
                         break;
                     } catch (InputMismatchException inputMismatchException) {
-                        System.out.println("잘못된 값을 입력했습니다. 0 이상의 정수를 입력해주세요.\n");
+                        System.out.println("0 이상의 정수를 입력해주세요.\n");
                     }
                 }
             } else if (input == 2) { // 금액
                 while (true) {
                     try {
-                        editTotalPayment(groups[groupType.getIndex()]);
-                        Customers.setCustomers_Type();
+                        editTotalPayment(groups[memberGrade.getIndex()]);
+                        Customers.setCustomers_memberGrade();
                         break;
                     } catch (InputMismatchException inputMismatchException) {
                         sc = new Scanner(System.in);
-                        System.out.println("잘못된 값을 입력했습니다. 0 이상의 정수를 입력해주세요.\n");
+                        System.out.println("0 이상의 정수를 입력해주세요.\n");
                     } catch (InputRangeException e) {
                         System.out.println("다시 입력하세요.");
                     }
@@ -125,14 +169,14 @@ public class Classification_Menu {
         }
     }
 
-    public static boolean isGradeExist(GroupType groupType) {
-        if (groups[groupType.getIndex()].isInitialized()) return true;
+    public static boolean isGradeExist(MemberGrade memberGrade) {
+        if (groups[memberGrade.getIndex()].isInitialized()) return true;
         else return false;
     }
 
     public static void editSpentTime(Group group) throws InputRangeException, InputMismatchException {
         Scanner sc = new Scanner(System.in);
-        System.out.print(group.getGrade().getLabel() + "이(가) 되기 위해 필요한 최소 사용 시간을 입력하세요 : ");
+        System.out.print(group.getGrade().getLabel() + "등급의 최소 사용 시간을 입력하세요 : ");
         int time = sc.nextInt();
         System.out.println();
         group.getParam().setSpentTime(time);
@@ -140,7 +184,7 @@ public class Classification_Menu {
 
     public static void editTotalPayment(Group group) throws InputRangeException, InputMismatchException{
         Scanner sc = new Scanner(System.in);
-        System.out.print(group.getGrade().getLabel() + "이(가) 되기 위해 필요한 최소 결제 금액을 입력하세요 : ");
+        System.out.print(group.getGrade().getLabel() + "등급의 최소 사용 금액을 입력하세요 : ");
         int money = sc.nextInt();
         System.out.println();
         group.getParam().setTotalPayment(money);
