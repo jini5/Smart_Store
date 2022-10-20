@@ -1,31 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8dccc23b-2ed3-4ac3-bfc6-ddc1bb7d2851" name="Changes" comment="수정중">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Summary/SummaryMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classification_Parameter/Classification_Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classification_Parameter/Classification_Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classification_Parameter/Set_Parameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classification_Parameter/Set_Parameter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classification_Parameter/Update_Parameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classification_Parameter/Update_Parameter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classification_Parameter/View_Parameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classification_Parameter/View_Parameter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Customer_Data/CustomerAdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer_Data/CustomerAdd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Customer_Data/CustomerList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Customer_Data/CustomerUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer_Data/CustomerUpdate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Store/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Store/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Store/Customers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Store/Customers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Store/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Store/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Summary/CustomerNameComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Summary/CustomerNameComparator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Summary/Summary.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Summary/Summary_Name.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Summary/Summary_SpentTime.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Summary/Summary_TotalPayment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/groups/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/groups/Group.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/groups/GroupType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/groups/MemberGrade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/groups/Groups.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/groups/Groups.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/groups/Parameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/groups/Parameter.java" afterDir="false" />
-    </list>
+    <list default="true" id="8dccc23b-2ed3-4ac3-bfc6-ddc1bb7d2851" name="Changes" comment="수정중" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -119,7 +95,7 @@
       <option name="presentableId" value="Default" />
       <updated>1665140564898</updated>
       <workItem from="1666173189378" duration="20917000" />
-      <workItem from="1666237856315" duration="9296000" />
+      <workItem from="1666237856315" duration="9640000" />
     </task>
     <task id="LOCAL-00001" summary="수정중">
       <created>1665303131596</created>
@@ -247,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666067194206</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="수정중">
+      <created>1666260243140</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1666260243140</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
