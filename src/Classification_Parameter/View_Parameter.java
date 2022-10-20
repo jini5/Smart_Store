@@ -1,48 +1,79 @@
 package Classification_Parameter;
 
-import groups.Group;
-import groups.MemberGrade;
-import groups.Groups;
-
+import java.util.InputMismatchException;
 import java.util.Locale;
+import java.util.Scanner;
 
-import static Classification_Parameter.Classification_Menu.isGradeExist;
-import static Classification_Parameter.Classification_Menu.selectGrade;
 
 public class View_Parameter {
 
-    static Group[] groups = Groups.getInstance().getGroups();
-
-
 
     public static void viewParameter() {
-        while (true) {
-            String input = selectGrade().toUpperCase(Locale.ROOT);
-            if (input.equals("END")) return;
-
-            if (input.equals("GENERAL") || input.equals("VIP") || input.equals("VVIP")) {
-                MemberGrade memberGrade = null;
-
-                for (MemberGrade mg : MemberGrade.values()) {
-                    if (mg.name().equals(input)) memberGrade = mg;
+        boolean result = true;
+        while (result) {
+            int menu = set_menu();
+            try {
+                if (menu == 1) {//GENERAL
+                    general.showInfo();
+                    viewParameter();
+                    break;
                 }
-
-                if (!isGradeExist(memberGrade)) {
-                    System.out.println("해당 등급 분류 기준이 존재하지 않습니다.\n");
-                    continue;
+                if (menu == 2) {// VIP
+                    vip.showInfo();
+                    viewParameter();
+                    break;
                 }
+                if (menu == 3) {// VVIP
+                    vvip.showInfo();
+                    viewParameter();
+                    break;
+                }
+                if (menu == 4) {// 종료
+                    System.out.println("프로그램을 종료합니다.");
+                    result = false;
+                    break;
+                }
+                System.out.println("다시 입력해주세요");
+            } catch (InputMismatchException e) {
+                System.out.println("다시 입력해주세요");
 
-                Group group = groups[memberGrade.getIndex()];
-                System.out.println("[그룹] " + memberGrade.getLabel());
-                System.out.println("이용 시간 : " + group.getParam().getSpentTime());
-                System.out.println("사용 금액 : " + group.getParam().getTotalPayment() + "\n");
-            } else {
-                System.out.println("다시 입력하세요.\n");
             }
+
         }
+
     }
 
 
+    public static int set_menu(){
+        Scanner sc = new Scanner(System.in);
+        while(true){
+            try{
+                System.out.println();
+                System.out.println();
+                System.out.println("    확인할 등급을 선택 해주세요.");
+                System.out.print("==============================\n"+
+                        "1. GENERAL\n"+
+                        "2. VIP\n"+
+                        "3. VVIP\n"+
+                        "4. 뒤로가기.\n"+
+                        "==============================\n"+
+                        "등급을 선택해주세요 :");
+                int menu = Integer.parseInt(sc.next());
+                if(menu<0 || menu > 4){
+                    throw new InputMismatchException();
+                }return menu;
+            }catch (InputMismatchException e){
+                System.out.println("==========================");
+                System.out.println("다시 입력하세요");
+            }catch(NumberFormatException e){
+                System.out.println("==========================");
+                System.out.println("다시 입력하세요");
+            }catch (NegativeArraySizeException e){
+                System.out.println("==========================");
+                System.out.println("다시 입력하세요");
+            }
+        }
+    }
 
 
 

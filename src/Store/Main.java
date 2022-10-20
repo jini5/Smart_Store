@@ -1,11 +1,16 @@
 package Store;
 import java.util.*;
 
-import Classification_Parameter.Classification_Menu;
+import Classification_Parameter.Parameter_Menu;
+import Classification_Parameter.general;
+import Classification_Parameter.vip;
+import Classification_Parameter.vvip;
 import Customer_Data.Customer_Menu;
 import Summary.SummaryMain;
 
 import java.util.InputMismatchException;
+
+import static Classification_Parameter.Parameter_Menu.classifiCationMenu;
 
 public class Main {
 
@@ -62,7 +67,7 @@ public class Main {
         int menu = selectMenu();
         switch (menu) {
             case 1:
-                Classification_Menu.classifiCationMenu();
+                Parameter_Menu.classifiCationMenu();
                 break;
             case 2:
                 Customer_Menu.CustomerMainMenu();

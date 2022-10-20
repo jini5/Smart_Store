@@ -42,7 +42,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/user/IdeaProjects/백업/20일.......... 파일",
+    "last_opened_file_path": "C:/Users/user/IdeaProjects/KDT3_Java_ToyProject_SmartStore",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -55,13 +55,6 @@
       <recent name="Store" />
       <recent name="Customer_Data" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\user\IdeaProjects\Smart_Store\src" />
-      <recent name="C:\Users\user\IdeaProjects\Smart_Store\src\Summary" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="Summary" />
-    </key>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -69,7 +62,7 @@
       <module name="Smart_Store" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="My_Classification_Parameter.*" />
+          <option name="PATTERN" value="Classification_Parameter.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -94,8 +87,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665140564898</updated>
-      <workItem from="1666173189378" duration="20917000" />
-      <workItem from="1666237856315" duration="9640000" />
+      <workItem from="1666173189378" duration="15473000" />
+      <workItem from="1666220368724" duration="1406000" />
+      <workItem from="1666237843978" duration="10000" />
+      <workItem from="1666254954736" duration="2185000" />
     </task>
     <task id="LOCAL-00001" summary="수정중">
       <created>1665303131596</created>
@@ -223,14 +218,7 @@
       <option name="project" value="LOCAL" />
       <updated>1666067194206</updated>
     </task>
-    <task id="LOCAL-00019" summary="수정중">
-      <created>1666260243140</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1666260243140</updated>
-    </task>
-    <option name="localTasksCounter" value="20" />
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
