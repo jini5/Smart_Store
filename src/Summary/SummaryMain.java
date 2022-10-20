@@ -16,19 +16,24 @@ public class SummaryMain {
         int menu = selectMenu();
         switch (menu) {
             case 1:
+                System.out.println("** 등록 순으로 보기 **\n");
                 Summary.viewGroupType();
                 break;
             case 2:
+                System.out.println("** 이름 순으로 보기 **\n");
                 SummaryByName.showByName_Menu();//이름
                 break;
             case 3:
+                System.out.println("** 사용 시간 순으로 보기 **\n");
                 SummaryBySpentTime.showByTime_Menu();//시간
                 break;
             case 4:
+                System.out.println("** 사용 금액 순으로 보기 **\n");
                 SummaryByPayment.showByPayment_Menu();//금액
                 break;
             case 5:
                 System.out.println("뒤로가기");
+                Main.mainMenu();
                 break;
         }
 
@@ -45,7 +50,7 @@ public class SummaryMain {
                 System.out.println("====================");
                 System.out.println("1. 등록 순으로 보기");
                 System.out.println("2. 이름 순으로 보기");
-                System.out.println("3. 사용  시간 순으로 보기");
+                System.out.println("3. 사용 시간 순으로 보기");
                 System.out.println("4. 사용 금액 순으로 보기");
                 System.out.println("5. 뒤로가기");
                 System.out.println("====================");

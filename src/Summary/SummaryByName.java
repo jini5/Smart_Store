@@ -2,27 +2,32 @@ package Summary;
 
 import Store.*;
 
-import java.util.Arrays;
-import java.util.InputMismatchException;
-import java.util.Scanner;
+import java.util.*;
+import java.util.Comparator;
 
 import static Customer_Data.CustomerAdd.customerlist;
 import static Summary.Summary.*;
+import static Summary.Summary.getVVipList;
 
 public class SummaryByName {
 
     public static void showByName_Menu() {
-        int menu = selectMenu();
-        switch (menu) {
-            case 1:
-                //오름차순
-                break;
-            case 2:
-                //내림차순
-                break;
-            case 3:
-                System.out.println("프로그램을 종료합니다.");
-                break;
+        boolean result = true;
+        while (result) {
+            int menu = selectMenu();
+            switch (menu) {
+                case 1:
+                    viewNameTypeA();//오름차순
+                    break;
+                case 2:
+                    viewNameTypeD();//내림차순
+                    break;
+                case 3:
+                    System.out.println("뒤로가기");
+                    result=false;
+                    SummaryMain.SummaryMenu();
+                    break;
+            }
         }
 
 
@@ -61,20 +66,50 @@ public class SummaryByName {
         groupTypeSet();
         System.out.println("\n ====이름순 출력====\n");
         System.out.println("** VVIP등급 **");
-        for(int i = 0; i< getVVipList().length; i++){
-            //System.out.println(getVVipList()[i]);
+        for(int i = 0; i< getVVipList().length; i++) {
+            Arrays.sort(getVVipList(), new Comparator<Customer>() {
+                @Override
+                public int compare(Customer o1, Customer o2) {
+                    return o1.getCutomerName().compareTo(o2.getCutomerName());
+                }
+            });
+            System.out.println(getVVipList()[i]);
         }
+
+
         System.out.println("\n** VIP등급 **");
         for(int i = 0; i< getVipList().length; i++){
-            //System.out.println(getVipList()[i]);
+            Arrays.sort(getVipList(), new Comparator<Customer>() {
+                @Override
+                public int compare(Customer o1, Customer o2) {
+                    return o1.getCutomerName().compareTo(o2.getCutomerName());
+                }
+            });
+            System.out.println(getVipList()[i]);
         }
+
+
         System.out.println("\n** GENERAL등급 **");
         for(int i = 0; i< getGeneralList().length; i++){
-            //System.out.println(getGeneralList()[i]);
+            Arrays.sort(getGeneralList(), new Comparator<Customer>() {
+                @Override
+                public int compare(Customer o1, Customer o2) {
+                    return o1.getCutomerName().compareTo(o2.getCutomerName());
+                }
+            });
+            System.out.println(getGeneralList()[i]);
         }
+
+
         System.out.println("\n** NONE등급 **");
         for(int i = 0; i< getNoneList().length; i++){
-            //System.out.println(getNoneList()[i]);
+            Arrays.sort(getNoneList(), new Comparator<Customer>() {
+                @Override
+                public int compare(Customer o1, Customer o2) {
+                    return o1.getCutomerName().compareTo(o2.getCutomerName());
+                }
+            });
+            System.out.println(getNoneList()[i]);
         }
 
     }
@@ -83,23 +118,58 @@ public class SummaryByName {
         groupTypeSet();
         System.out.println("\n ====이름순 출력====\n");
         System.out.println("** VVIP등급 **");
+
+
         for(int i = 0; i< getVVipList().length; i++){
-            //System.out.println(getVVipList()[i]);
+            Arrays.sort(getVVipList(), new Comparator<Customer>() {
+                @Override
+                public int compare(Customer o1, Customer o2) {
+                    return o2.getCutomerName().compareTo(o1.getCutomerName());
+                }
+            });
+
+            System.out.println(getVVipList()[i]);
         }
+
+
         System.out.println("\n** VIP등급 **");
         for(int i = 0; i< getVipList().length; i++){
-            //System.out.println(getVipList()[i]);
+            Arrays.sort(getVipList(), new Comparator<Customer>() {
+                @Override
+                public int compare(Customer o1, Customer o2) {
+                    return o2.getCutomerName().compareTo(o1.getCutomerName());
+                }
+            });
+            System.out.println(getVipList()[i]);
         }
+
+
         System.out.println("\n** GENERAL등급 **");
         for(int i = 0; i< getGeneralList().length; i++){
-            //System.out.println(getGeneralList()[i]);
+            Arrays.sort(getGeneralList(), new Comparator<Customer>() {
+                @Override
+                public int compare(Customer o1, Customer o2) {
+                    return o2.getCutomerName().compareTo(o1.getCutomerName());
+                }
+            });
+            System.out.println(getGeneralList()[i]);
         }
+
+
+
         System.out.println("\n** NONE등급 **");
         for(int i = 0; i< getNoneList().length; i++){
-            //System.out.println(getNoneList()[i]);
+            Arrays.sort(getNoneList(), new Comparator<Customer>() {
+                @Override
+                public int compare(Customer o1, Customer o2) {
+                    return o2.getCutomerName().compareTo(o1.getCutomerName());
+                }
+            });
+            System.out.println(getNoneList()[i]);
         }
 
     }
+
 
 
 

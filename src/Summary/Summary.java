@@ -152,7 +152,7 @@ public class Summary {
         for(int i = 0; i< NoneList.length; i++){
             System.out.println(NoneList[i]);
         }
-
+        SummaryMain.SummaryMenu();
     }
 
 
