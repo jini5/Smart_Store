@@ -15,15 +15,50 @@ import static Store.Customer.memberType.NONE;
 public class Summary {
 
 
-    static int VVIPCNT=0;
-    static int VIPCNT=0;
-    static int GENERALCNT=0;
-    static int NONECNT=0;
+    private static int VVIPCNT;
+    private static int VIPCNT;
+    private static int GENERALCNT;
+    private static int NONECNT;
 
-    static Customer[] NoneList = new Customer[NONECNT];
-    static Customer[] GeneralList = new Customer[GENERALCNT];
-    static Customer[] VipList = new Customer[VIPCNT];
-    static Customer[] VVipList = new Customer[VVIPCNT];
+    private static Customer[] NoneList;
+    private static Customer[] GeneralList;
+    private static Customer[] VipList;
+    private static Customer[] VVipList;
+
+/////////getter////////////////
+    public static int getVVIPCNT() {
+        return VVIPCNT;
+    }
+
+    public static int getVIPCNT() {
+        return VIPCNT;
+    }
+
+    public static int getGENERALCNT() {
+        return GENERALCNT;
+    }
+
+    public static int getNONECNT() {
+        return NONECNT;
+    }
+
+    public static Customer[] getNoneList() {
+        return NoneList;
+    }
+
+    public static Customer[] getGeneralList() {
+        return GeneralList;
+    }
+
+    public static Customer[] getVipList() {
+        return VipList;
+    }
+
+    public static Customer[] getVVipList() {
+        return VVipList;
+    }
+/////////////////////////////////////////////
+
 
     public static void groupTypeSet() {
         general.getMinMoney();
@@ -33,7 +68,10 @@ public class Summary {
         vvip.getMinMoney();
         vvip.getMinTime();
 
-
+        VVIPCNT=0;
+        VIPCNT=0;
+        GENERALCNT=0;
+        NONECNT=0;
 
         // 등급별 나누기
         for(int i=0; i<customerlist.length; i++){
@@ -62,6 +100,10 @@ public class Summary {
 
 
     public static void makearr(){
+        NoneList = new Customer[NONECNT];
+        GeneralList = new Customer[GENERALCNT];
+        VipList = new Customer[VIPCNT];
+        VVipList = new Customer[VVIPCNT];
 
         int vvcnt=0;
         int vcnt=0;
